@@ -1,128 +1,227 @@
-{% extends 'home/base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>主页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
 
-{% block container %}
-    <section id="hotmovie" style="margin-top:76px">
-        <div class="container">
-            <div class="row wow fadeInRight" data-wow-delay="0.6s">
-                <div class="row">
-                    <iframe class="wow fadeIn" width="100%" height="375px" frameborder=0 scrolling=no
-                            src="{{ url_for('home.indexbanner') }}"></iframe>
-                </div>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="#home" class="w3-bar-item w3-button"><b>开心往前飞</b>首页</a>
+        <a href="./homepage.html" target="_blank" class="w3-bar-item w3-button">个人主页</a>
+
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+            <a href="#Hot" class="w3-bar-item w3-small w3-button">热映中</a>
+            <a href="#projects" class="w3-bar-item w3-small w3-button">精品推荐</a>
+            <a href="#contact" class="w3-bar-item w3-small w3-button">即将上映</a>
+            <a href="#Search" class="w3-bar-item w3-small w3-button">搜索</a>
+        </div>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+    <img class="w3-image"
+         src="https://ts1.cn.mm.bing.net/th/id/R-C.357ec4d695dc013f33138245e7889cbe?rik=TP8F0pr3ZT7VeA&riu=http%3a%2f%2fimage.qianye88.com%2fpic%2f563d9914f2c8cb13979a72f1d02667a0&ehk=u7jCrvRDegA8k1Nms06Mckj9l61jAWbQiwmJEew%2b1dg%3d&risl=&pid=ImgRaw&r=0v"
+         alt="Architecture" width="1500" height="800">
+    <div class="w3-display-middle w3-margin-top w3-center">
+        <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min">
+        <b>HP</b></span> <span class="w3-hide-small w3-text-light-grey">MOVIES</span></h1>
+    </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+    <div class="w3-container w3-padding-32" id="Hot">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">热映中</h3>
+    </div>
+    <div class="w3-row-padding w3-padding-16">
+        <div class="w3-third w3-margin-bottom">
+            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.529b05b63e0e5ca304c0f4a44f1b205b?rik=V1F3eL6tQfJ50A&riu=http%3a%2f%2fimg.doooor.com%2fimg%2fforum%2f201706%2f23%2f022959xqxx5sxxugxwnbiu.jpg&ehk=S8soDRdlFpzPD%2bZ4MowrvI%2fXcfbUEgaT3QCFGRgrvmM%3d&risl=&pid=ImgRaw&r=0"
+                 alt="Norway" style="width:100%">
+            <div class="w3-container w3-white">
+                <h3>肖申克的救赎</h3>
+                <h6 class="w3-opacity">From ¥49</h6>
+                <p>4000人想看 15269人看过</p>
+                <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i>
+                </p>
+                <button class="w3-button w3-block w3-black w3-margin-bottom">我想看</button>
             </div>
         </div>
-    </section>
-    <!--热门电影-->
-    <!--电影列表-->
-    <section id="movielist">
-        <div class="container">
-            <div class="row wow fadeIn" data-wow-delay="0.6s">
-                <div class="col-md-12 table-responsive">
-                    <table class="table text-left table-bordered" id="movietags">
-                        <tr>
-                            <td style="width:10%;">电影标签</td>
-                            <td style="width:90%;">
-                                <a class="label label-info"
-                                   href="{{ url_for('home.index', page=1) }}?tag_id=0&star_num={{ selected['star_num'] }}&time_year={{ selected['time_year'] }}&play_num={{ selected['play_num'] }}&comment_num={{ selected['comment_num'] }}"><span
-                                        class="glyphicon glyphicon-tag"></span>&nbsp;所有</a>
-                                &nbsp;
-                                {% for tag in all_tag %}
-                                    <a class="label label-info"
-                                       href="{{ url_for('home.index', page=1) }}?tag_id={{ tag.id }}&star_num={{ selected['star_num'] }}&time_year={{ selected['time_year'] }}&play_num={{ selected['play_num'] }}&comment_num={{ selected['comment_num'] }}"><span
-                                            class="glyphicon glyphicon-tag"></span>&nbsp;{{ tag.name }}</a>
-                                    &nbsp;
-                                {% endfor %}
-                        </tr>
-                        <tr>
-                            <td>电影星级</td>
-                            <td>
-                                <a class="label label-warning"
-                                   href="{{ url_for('home.index', page=1) }}?tag_id={{ selected['tag_id'] }}&star_num=0&time_year={{ selected['time_year'] }}&play_num={{ selected['play_num'] }}&comment_num={{ selected['comment_num'] }}"><span
-                                        class="glyphicon glyphicon-star"></span>&nbsp;所有</a>
-                                &nbsp;
-                                {% for star in all_star %}
-                                    <a class="label label-warning"
-                                       href="{{ url_for('home.index', page=1) }}?tag_id={{ selected['tag_id'] }}&star_num={{ star.num }}&time_year={{ selected['time_year'] }}&play_num={{ selected['play_num'] }}&comment_num={{ selected['comment_num'] }}"><span
-                                            class="glyphicon glyphicon-star"></span>&nbsp;{{ star.info }}</a>
-                                    &nbsp;
-                                {% endfor %}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>上映时间</td>
-                            <td>
-                                <a class="label label-default"
-                                   href="{{ url_for('home.index', page=1) }}?tag_id={{ selected['tag_id'] }}&star_num={{ selected['star_num'] }}&time_year=1&play_num={{ selected['play_num'] }}&comment_num={{ selected['comment_num'] }}"><span
-                                        class="glyphicon glyphicon-time">&nbsp;所有</span></a>
-                                &nbsp;
-                                <a class="label label-default"
-                                   href="{{ url_for('home.index', page=1) }}?tag_id={{ selected['tag_id'] }}&star_num={{ selected['star_num'] }}&time_year={{ now_year }}&play_num={{ selected['play_num'] }}&comment_num={{ selected['comment_num'] }}"><span
-                                        class="glyphicon glyphicon-time">&nbsp;最近</span></a>
-                                &nbsp;
-                                {% for year in year_range %}
-                                    <a class="label label-default"
-                                       href="{{ url_for('home.index', page=1) }}?tag_id={{ selected['tag_id'] }}&star_num={{ selected['star_num'] }}&time_year={{ year }}&play_num={{ selected['play_num'] }}&comment_num={{ selected['comment_num'] }}"><span
-                                            class="glyphicon glyphicon-time">&nbsp;{{ year }}</span></a>
-                                    &nbsp;
-                                {% endfor %}
-                                <a class="label label-default"
-                                   href="{{ url_for('home.index', page=1) }}?tag_id={{ selected['tag_id'] }}&star_num={{ selected['star_num'] }}&time_year=0&play_num={{ selected['play_num'] }}&comment_num={{ selected['comment_num'] }}"><span
-                                        class="glyphicon glyphicon-time">&nbsp;更早</span></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>播放数量</td>
-                            <td>
-                                <a class="label label-success"
-                                   href="{{ url_for('home.index', page=1) }}?tag_id={{ selected['tag_id'] }}&star_num={{ selected['star_num'] }}&time_year={{ selected['time_year'] }}&play_num=1&comment_num={{ selected['comment_num'] }}"><span
-                                        class="glyphicon glyphicon-arrow-down">&nbsp;从高到底</span></a>
-                                &nbsp;
-                                <a class="label label-danger"
-                                   href="{{ url_for('home.index', page=1) }}?tag_id={{ selected['tag_id'] }}&star_num={{ selected['star_num'] }}&time_year={{ selected['time_year'] }}&play_num=0&comment_num={{ selected['comment_num'] }}"><span
-                                        class="glyphicon glyphicon-arrow-up">&nbsp;从低到高</span></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>评论数量</td>
-                            <td>
-                                <a class="label label-success"
-                                   href="{{ url_for('home.index', page=1) }}?tag_id={{ selected['tag_id'] }}&star_num={{ selected['star_num'] }}&time_year={{ selected['time_year'] }}&play_num={{ selected['play_num'] }}&comment_num=1"><span
-                                        class="glyphicon glyphicon-arrow-down">&nbsp;从高到底</span></a>
-                                &nbsp;
-                                <a class="label label-danger"
-                                   href="{{ url_for('home.index', page=1) }}?tag_id={{ selected['tag_id'] }}&star_num={{ selected['star_num'] }}&time_year={{ selected['time_year'] }}&play_num={{ selected['play_num'] }}&comment_num=0"><span
-                                        class="glyphicon glyphicon-arrow-up">&nbsp;从低到高</span></a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                {% for movie in page_movies.items %}
-                    <div class="col-md-3">
-                        <div class="movielist text-center">
-                            <!--<img data-original="holder.js/262x166"
-                                     class="img-responsive lazy center-block" alt="">-->
-                            <img src="{{ url_for('static', filename='media/' + movie.logo) }}"
-                                 class="img-responsive center-block" alt="" style="height: 180px; width: 260px">
-                            <div class="text-left" style="margin-left:auto;margin-right:auto;width:210px;">
-                                <span style="color:#999;font-style: italic;">{{ movie.title }}</span><br>
-                                <div>
-                                    {% for i in range(movie.star) %}
-                                        <span class="glyphicon glyphicon-star" style="color:#FFD119"></span>
-                                    {% endfor %}
-                                    {% for i in range(5 - movie.star) %}
-                                        <span class="glyphicon glyphicon-star-empty" style="color:#FFD119"></span>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                            <a href="{{ url_for('home.play', movie_id=movie.id, page=1) }}" class="btn btn-primary"
-                               target="_blank" role="button"><span class="glyphicon glyphicon-play"></span>&nbsp;播放</a>
-                        </div>
-                    </div>
-                {% endfor %}
-                <div class="col-md-12">
-                    {% import 'home/pagination.html' as pg %}
-                    {{ pg.render_pagination(page_movies, 'home.index') }}
-                </div>
+        <div class="w3-third w3-margin-bottom">
+            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.529b05b63e0e5ca304c0f4a44f1b205b?rik=V1F3eL6tQfJ50A&riu=http%3a%2f%2fimg.doooor.com%2fimg%2fforum%2f201706%2f23%2f022959xqxx5sxxugxwnbiu.jpg&ehk=S8soDRdlFpzPD%2bZ4MowrvI%2fXcfbUEgaT3QCFGRgrvmM%3d&risl=&pid=ImgRaw&r=0"
+                 alt="Norway" style="width:100%">
+            <div class="w3-container w3-white">
+                <h3>肖申克的救赎</h3>
+                <h6 class="w3-opacity">From ¥49</h6>
+                <p>4000人想看 15269人看过</p>
+                <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i
+                        class="fa fa-tv"></i></p>
+                <button class="w3-button w3-block w3-black w3-margin-bottom">我想看</button>
             </div>
         </div>
-    </section>
-{% endblock %}
+        <div class="w3-third w3-margin-bottom">
+            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.529b05b63e0e5ca304c0f4a44f1b205b?rik=V1F3eL6tQfJ50A&riu=http%3a%2f%2fimg.doooor.com%2fimg%2fforum%2f201706%2f23%2f022959xqxx5sxxugxwnbiu.jpg&ehk=S8soDRdlFpzPD%2bZ4MowrvI%2fXcfbUEgaT3QCFGRgrvmM%3d&risl=&pid=ImgRaw&r=0"
+                 alt="Norway" style="width:100%">
+            <div class="w3-container w3-white">
+                <h3>肖申克的救赎</h3>
+                <h6 class="w3-opacity">From ¥49</h6>
+                <p>4000人想看 15269人看过</p>
+                <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i
+                        class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
+                <button class="w3-button w3-block w3-black w3-margin-bottom">我想看</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Project Section -->
+    <div class="w3-container w3-padding-32" id="projects">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">精品推荐</h3>
+    </div>
+
+    <div class="w3-row-padding">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-display-container">
+                <div class="w3-display-topleft w3-black w3-padding">爱乐之城</div>
+                <img src="https://pic4.zhimg.com/v2-e9c84e4fbdc2b7b43ae447071ad39ce0_1440w.jpg?source=172ae18b"
+                     alt="House" style="width:100%">
+            </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-display-container">
+                <div class="w3-display-topleft w3-black w3-padding">爱乐之城</div>
+                <img src="https://pic4.zhimg.com/v2-e9c84e4fbdc2b7b43ae447071ad39ce0_1440w.jpg?source=172ae18b"
+                     alt="House" style="width:100%">
+            </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-display-container">
+                <div class="w3-display-topleft w3-black w3-padding">爱乐之城</div>
+                <img src="https://pic4.zhimg.com/v2-e9c84e4fbdc2b7b43ae447071ad39ce0_1440w.jpg?source=172ae18b"
+                     alt="House" style="width:100%">
+            </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-display-container">
+                <div class="w3-display-topleft w3-black w3-padding">爱乐之城</div>
+                <img src="https://pic4.zhimg.com/v2-e9c84e4fbdc2b7b43ae447071ad39ce0_1440w.jpg?source=172ae18b"
+                     alt="House" style="width:100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-row-padding">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-display-container">
+                <div class="w3-display-topleft w3-black w3-padding">爱乐之城</div>
+                <img src="https://pic4.zhimg.com/v2-e9c84e4fbdc2b7b43ae447071ad39ce0_1440w.jpg?source=172ae18b"
+                     alt="House" style="width:99%">
+            </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-display-container">
+                <div class="w3-display-topleft w3-black w3-padding">爱乐之城</div>
+                <img src="https://pic4.zhimg.com/v2-e9c84e4fbdc2b7b43ae447071ad39ce0_1440w.jpg?source=172ae18b"
+                     alt="House" style="width:99%">
+            </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-display-container">
+                <div class="w3-display-topleft w3-black w3-padding">爱乐之城</div>
+                <img src="https://pic4.zhimg.com/v2-e9c84e4fbdc2b7b43ae447071ad39ce0_1440w.jpg?source=172ae18b"
+                     alt="House" style="width:99%">
+            </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-display-container">
+                <div class="w3-display-topleft w3-black w3-padding">爱乐之城</div>
+                <img src="https://pic4.zhimg.com/v2-e9c84e4fbdc2b7b43ae447071ad39ce0_1440w.jpg?source=172ae18b"
+                     alt="House" style="width:99%">
+            </div>
+        </div>
+    </div>
+
+    <!-- contact Section -->
+    <div class="w3-container w3-padding-32" id="contact">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">即将上映</h3>
+    </div>
+
+    <div class="w3-row-padding w3-grayscale">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.529b05b63e0e5ca304c0f4a44f1b205b?rik=V1F3eL6tQfJ50A&riu=http%3a%2f%2fimg.doooor.com%2fimg%2fforum%2f201706%2f23%2f022959xqxx5sxxugxwnbiu.jpg&ehk=S8soDRdlFpzPD%2bZ4MowrvI%2fXcfbUEgaT3QCFGRgrvmM%3d&risl=&pid=ImgRaw&r=0"
+                 alt="John" style="width:100%">
+            <h3>肖申克的救赎</h3>
+            <p class="w3-opacity">The Shawshank Redemption</p>
+            <p>该片根据斯蒂芬·埃德温·金1982年的中篇小说《肖申克的救赎》改编，主要讲述了银行家安迪因被误判为枪杀妻子及其情人的罪名入狱后，他不动声色、步步为营地谋划自我拯救并最终成功越狱，重获自由的故事。</p>
+            <p>
+                <button class="w3-button w3-light-grey w3-block">预约观看</button>
+            </p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.529b05b63e0e5ca304c0f4a44f1b205b?rik=V1F3eL6tQfJ50A&riu=http%3a%2f%2fimg.doooor.com%2fimg%2fforum%2f201706%2f23%2f022959xqxx5sxxugxwnbiu.jpg&ehk=S8soDRdlFpzPD%2bZ4MowrvI%2fXcfbUEgaT3QCFGRgrvmM%3d&risl=&pid=ImgRaw&r=0"
+                 alt="Jane" style="width:100%">
+            <h3>肖申克的救赎</h3>
+            <p class="w3-opacity">The Shawshank Redemption</p>
+            <p>该片根据斯蒂芬·埃德温·金1982年的中篇小说《肖申克的救赎》改编，主要讲述了银行家安迪因被误判为枪杀妻子及其情人的罪名入狱后，他不动声色、步步为营地谋划自我拯救并最终成功越狱，重获自由的故事。</p>
+            <p>
+                <button class="w3-button w3-light-grey w3-block">预约观看</button>
+            </p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.529b05b63e0e5ca304c0f4a44f1b205b?rik=V1F3eL6tQfJ50A&riu=http%3a%2f%2fimg.doooor.com%2fimg%2fforum%2f201706%2f23%2f022959xqxx5sxxugxwnbiu.jpg&ehk=S8soDRdlFpzPD%2bZ4MowrvI%2fXcfbUEgaT3QCFGRgrvmM%3d&risl=&pid=ImgRaw&r=0"
+                 alt="Mike" style="width:100%">
+            <h3>肖申克的救赎</h3>
+            <p class="w3-opacity">The Shawshank Redemption</p>
+            <p>该片根据斯蒂芬·埃德温·金1982年的中篇小说《肖申克的救赎》改编，主要讲述了银行家安迪因被误判为枪杀妻子及其情人的罪名入狱后，他不动声色、步步为营地谋划自我拯救并最终成功越狱，重获自由的故事。</p>
+            <p>
+                <button class="w3-button w3-light-grey w3-block">预约观看</button>
+            </p>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.529b05b63e0e5ca304c0f4a44f1b205b?rik=V1F3eL6tQfJ50A&riu=http%3a%2f%2fimg.doooor.com%2fimg%2fforum%2f201706%2f23%2f022959xqxx5sxxugxwnbiu.jpg&ehk=S8soDRdlFpzPD%2bZ4MowrvI%2fXcfbUEgaT3QCFGRgrvmM%3d&risl=&pid=ImgRaw&r=0"
+                 alt="Dan" style="width:100%">
+            <h3>肖申克的救赎</h3>
+            <p class="w3-opacity">The Shawshank Redemption</p>
+            <p>该片根据斯蒂芬·埃德温·金1982年的中篇小说《肖申克的救赎》改编，主要讲述了银行家安迪因被误判为枪杀妻子及其情人的罪名入狱后，他不动声色、步步为营地谋划自我拯救并最终成功越狱，重获自由的故事。</p>
+            <p>
+                <button class="w3-button w3-light-grey w3-block">预约观看</button>
+            </p>
+        </div>
+    </div>
+
+    <!-- Search Section -->
+    <div class="w3-container w3-padding-32" id="Search">
+        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">搜索</h3>
+        <p>输入你想观看的电影吧！</p>
+        <form action="/action_page.php" target="_blank">
+            <label>
+                <input class="w3-input w3-border w3-half" type="text" placeholder="Name" required name="Name">
+            </label>
+            <button class="w3-button w3-black" type="submit">Search</button>
+        </form>
+    </div>
+
+
+    <!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+    <p>一起看电影吧 致力于普及中国最好的电影它与中国一流院线合作提供在线电影检索，
+        提供当下热门的电影大片在线观看服务，为您提供好看的电影，带你享受无以伦比的影视盛宴。
+
+    </p>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+                     class="w3-hover-text-green">开心往前飞</a></p>
+</footer>
+
+</body>
+</html>
