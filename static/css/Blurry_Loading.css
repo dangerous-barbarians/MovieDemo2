@@ -1,32 +1,93 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Ubuntu', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
 }
 
 .bg {
-  background: url('https://images.unsplash.com/photo-1576161787924-01bb08dad4a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2104&q=80')
-    no-repeat center center/cover;
-  position: absolute;
-  top: -30px;
-  left: -30px;
-  width: calc(100vw + 60px);
-  height: calc(100vh + 60px);
-  z-index: -1;
-  filter: blur(0px);
+    background: url(../img/header.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    filter: blur(0px);
 }
 
 .loading-text {
-  font-size: 50px;
-  color: #fff;
+    font-size: 50px;
+    color: #fff;
+}
+
+html, body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1C1C2A;
+    font-size: 16px;
+    z-index: -9;
+}
+
+.content {
+    width: 606px;
+    height: 360px;
+    filter: grayscale(80%);
+    background-size: cover;
+    z-index: -3;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+h1 {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    margin: 0;
+    font-size: 4rem;
+    color: transparent;
+    background: linear-gradient(to right, #fff, #BF391B, #0D0D0D);
+    -webkit-text-fill-color: transparent;
+    /*background-clip: text;*/
+    -webkit-background-clip: text;
+    position: relative;
+    letter-spacing: 0.4rem;
+    font-style: italic;
+}
+
+h1::before,
+h1::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    -webkit-text-stroke: 12px #000;
+    z-index: -1;
+}
+
+h1::after {
+    -webkit-text-stroke: 17px #fff;
+    z-index: -2;
+}
+
+h1:nth-child(2) {
+    margin-top: -12px;
+    font-size: 1.5rem;
+}
+
+.content:hover {
+    filter: none;
 }

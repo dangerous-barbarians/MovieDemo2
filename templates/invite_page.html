@@ -2,300 +2,336 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-<title>好友信息</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-grey.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
-</style>
+    <title>好友信息</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-grey.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html, body, h1, h2, h3, h4, h5 {
+            font-family: "Open Sans", sans-serif
+        }
+    </style>
 </head>
 <body class="w3-theme-l5">
 
-{#不知道怎么用的导航栏#}
-{#<nav>#}
-{#    <div class="w3-top" style="width: 100%">#}
-{#        <div class="w3-bar w3-white w3-wide w3-padding w3-card">#}
-{#            <b class="w3-bar-item w3-button">开心往前飞</b>#}
-{#            <a href="#" class="w3-bar-item w3-button"> 首页</a>#}
-{#            <a href="#" target="_blank" class="w3-bar-item w3-button">登录/注册</a>#}
-{#            <a href="/home_page" target="_blank" class="w3-bar-item w3-button">个人主页</a>#}
-{#        </div>#}
-{#    </div>#}
-{#</nav>#}
-{##}
-{#<div class="layui-row" style="margin-top:70px"> </div>#}
+<!-- Navbar (sit on top) -->
+<!--
+<nav>
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <b class="w3-bar-item w3-button">开心往前飞</b>
+        <a href="/" class="w3-bar-item w3-button"> 首页</a>
+        <a href="#" target="_self" class="w3-bar-item w3-button">登录/注册</a>
+        <a href="home_page" target="_self" class="w3-bar-item w3-button">个人主页</a>
+-->
+<!-- Float links to the right. Hide them on small screens -->
+<!--
+        <div class="w3-right w3-hide-small">
+            <a href="#Hot" class="w3-bar-item w3-small w3-button"><span>热映中</span></a>
+            <a href="#projects" class="w3-bar-item w3-small w3-button"><span>精品推荐</span></a>
+            <a href="#contact" class="w3-bar-item w3-small w3-button"><span>即将上映</span></a>
+            <a href="#Search" class="w3-bar-item w3-small w3-button"><span>搜索</span></a>
+        </div>
+    </div>
+</div>
+</nav>
+<div class="layui-row" style="margin-top:30px">
+-->
 
 <!-- Navbar -->
 <div class="w3-top ">
- <div class="w3-bar w3-light-grey w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Logo</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
-  <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>     
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
-      <a href="#" class="w3-bar-item w3-button">One new friend request</a>
-      <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
-      <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
+    <div class="w3-bar w3-light-grey w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2"
+           href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i
+                class="fa fa-home w3-margin-right"></i>Logo</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i
+                class="fa fa-globe"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
+           title="Account Settings"><i class="fa fa-user"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i
+                class="fa fa-envelope"></i></a>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span
+                    class="w3-badge w3-right w3-small w3-green">3</span></button>
+            <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+                <a href="#" class="w3-bar-item w3-button">One new friend request</a>
+                <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
+                <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
+            </div>
+        </div>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white"
+           title="My Account">
+            <img src="https://file.500sucai.com/upload/image/201507/3fa28594-5b49-43d4-ada4-a0f35a1a53ae.png"
+                 class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+        </a>
     </div>
-  </div>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-    <img src="https://file.500sucai.com/upload/image/201507/3fa28594-5b49-43d4-ada4-a0f35a1a53ae.png"
-    class="w3-circle" style="height:23px;width:23px" alt="Avatar">
-  </a>
- </div>
 </div>
 
 <!-- Navbar on small screens -->
 <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
 </div>
 
 <!-- Page Container -->
-<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
-  <!-- The Grid -->
-  <div class="w3-row">
-    <!-- Left Column -->
-    <div class="w3-col m3">
-      <!-- Profile -->
-      <div class="w3-card w3-round w3-light-grey">
-        <div class="w3-container">
-         <h4 class="w3-center">My Profile</h4>
-         <p class="w3-center"><img src="https://ts3.cn.mm.bing.net/th?id=OIP-C.9ZZva98r3IDj01xEtOOHbQAAAA&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2" 
-            class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
-         <hr>
-         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> 景观设计师</p>
-         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> 武汉, 湖北</p>
-         <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 1, 2000</p>
-        </div>
-      </div>
-      <br>
-      
-      <!-- Accordion -->
-      <div class="w3-card w3-round">
-        <div class="w3-white">
-          <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align">
-            <i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Friends</button>
-          <div id="Demo1" class="w3-hide w3-container">
-            <p>John Doe</p>
-            <p>Jane Watson</p>
-            <p>Angie Jane</p>
-          </div>
-          <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align">
-            <i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Dates</button>
-          <div id="Demo2" class="w3-hide w3-container">
-            <p>Green Book   (6 Apr,2022 ——Friday 15:00)</p>
-          </div>
-          <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align">
-            <i class="fa fa-users fa-fw w3-margin-right"></i> My Infos</button>
-          <div id="Demo3" class="w3-hide w3-container">
-         <div class="w3-row-padding">
-         <br>
-           <div class="w3-half">
-           </div>
-           <div class="w3-half">
-             <img src="http://file.500sucai.com/upload/image/201507/3302a8d1-4ac9-4648-b0dd-21283de96602.png" 
-             style="width:15%" class="w3-margin-bottom" alt="">
-           </div>
-           <div class="w3-half">
-             <img src="http://file.500sucai.com/upload/image/201507/9c06122e-5872-4618-b655-05cb3837408e.png" 
-             style="width:15%" class="w3-margin-bottom" alt="">
-           </div>
-           <div class="w3-half">
-            <img src="http://file.500sucai.com/upload/image/201507/b0341bd1-b998-4a28-8657-38ad0cc37391.png" 
-            style="width:15%" class="w3-margin-bottom" alt="">
-          </div>
-           <div class="w3-half">
-             <img src="http://file.500sucai.com/upload/image/201507/52794c82-2ea0-4cfd-ae2a-6bf4636b354c.png"
-             style="width:15%" class="w3-margin-bottom" alt="">
-           </div>
-           <div class="w3-half">
-             <img src="http://file.500sucai.com/upload/image/201507/616a547b-0082-418a-9cd9-d1d9719c0c4b.png" 
-             style="width:15%" class="w3-margin-bottom" alt="">
-           </div>
-           <div class="w3-half">
-             <img src="http://file.500sucai.com/upload/image/201507/a4748a89-d2eb-4bf4-a068-bd0d1ab94b6b.png" 
-             style="width:15%" class="w3-margin-bottom" alt="">
-           </div>
-         </div>
-          </div>
-        </div>      
-      </div>
-      <br>
-      
-      
-      
-      <!-- Alert Box -->
-      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
+    <!-- The Grid -->
+    <div class="w3-row">
+        <!-- Left Column -->
+        <div class="w3-col m3">
+            <!-- Profile -->
+            <div class="w3-card w3-round w3-light-grey">
+                <div class="w3-container">
+                    <h4 class="w3-center">My Profile</h4>
+                    <p class="w3-center"><img
+                            src="https://ts3.cn.mm.bing.net/th?id=OIP-C.9ZZva98r3IDj01xEtOOHbQAAAA&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2"
+                            class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+                    <hr>
+                    <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> 景观设计师</p>
+                    <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> 武汉, 湖北</p>
+                    <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> April 1, 2000</p>
+                </div>
+            </div>
+            <br>
+
+            <!-- Accordion -->
+            <div class="w3-card w3-round">
+                <div class="w3-white">
+                    <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align">
+                        <i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My Friends
+                    </button>
+                    <div id="Demo1" class="w3-hide w3-container">
+                        <p>John Doe</p>
+                        <p>Jane Watson</p>
+                        <p>Angie Jane</p>
+                    </div>
+                    <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align">
+                        <i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My Dates
+                    </button>
+                    <div id="Demo2" class="w3-hide w3-container">
+                        <p>Green Book (6 Apr,2022 ——Friday 15:00)</p>
+                    </div>
+                    <button onclick="myFunction('Demo3')" class="w3-button w3-block w3-theme-l1 w3-left-align">
+                        <i class="fa fa-users fa-fw w3-margin-right"></i> My Infos
+                    </button>
+                    <div id="Demo3" class="w3-hide w3-container">
+                        <div class="w3-row-padding">
+                            <br>
+                            <div class="w3-half">
+                            </div>
+                            <div class="w3-half">
+                                <img src="http://file.500sucai.com/upload/image/201507/3302a8d1-4ac9-4648-b0dd-21283de96602.png"
+                                     style="width:15%" class="w3-margin-bottom" alt="">
+                            </div>
+                            <div class="w3-half">
+                                <img src="http://file.500sucai.com/upload/image/201507/9c06122e-5872-4618-b655-05cb3837408e.png"
+                                     style="width:15%" class="w3-margin-bottom" alt="">
+                            </div>
+                            <div class="w3-half">
+                                <img src="http://file.500sucai.com/upload/image/201507/b0341bd1-b998-4a28-8657-38ad0cc37391.png"
+                                     style="width:15%" class="w3-margin-bottom" alt="">
+                            </div>
+                            <div class="w3-half">
+                                <img src="http://file.500sucai.com/upload/image/201507/52794c82-2ea0-4cfd-ae2a-6bf4636b354c.png"
+                                     style="width:15%" class="w3-margin-bottom" alt="">
+                            </div>
+                            <div class="w3-half">
+                                <img src="http://file.500sucai.com/upload/image/201507/616a547b-0082-418a-9cd9-d1d9719c0c4b.png"
+                                     style="width:15%" class="w3-margin-bottom" alt="">
+                            </div>
+                            <div class="w3-half">
+                                <img src="http://file.500sucai.com/upload/image/201507/a4748a89-d2eb-4bf4-a068-bd0d1ab94b6b.png"
+                                     style="width:15%" class="w3-margin-bottom" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+
+            <!-- Alert Box -->
+            <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
         <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
           <i class="fa fa-remove"></i>
         </span>
-        <p><strong>Hey!</strong></p>
-        <p>People are looking at your profile. Find out who.</p>
-      </div>
-    
-    <!-- End Left Column -->
-    </div>
-    
-    <!-- Middle Column -->
-    <div class="w3-col m7">
-    
-      <div class="w3-row-padding">
-        <div class="w3-col m12">
-          <div class="w3-card w3-round w3-white">
-            <div class="w3-container w3-padding">
-              <h6 class="w3-opacity">You have watched a movie, please write down your comments!</h6>
-              <p contenteditable="true" class="w3-border w3-padding">I can't believe it. It's so good!</p>
-              <button type="button" class="w3-right w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
+                <p><strong>Hey!</strong></p>
+                <p>People are looking at your profile. Find out who.</p>
             </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="https://img2.woyaogexing.com/2020/04/02/47b8913c3f6b425fa9e73b563f91e921!400x400.jpeg" 
-        alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity">1 min</span>
-        <h4>John Doe</h4><br>
-        <hr class="w3-clear">
-        <p>
-            我是大明plus，我来自一个普通的麻瓜家庭。不过，我十分确定我有十分优秀的巫师潜力，我有预感，最终会有霍格沃兹的猫头鹰来给我递送录取通知书。
-            各位同学，如果看到了一头白色的猫头鹰，请一定要联系我，那是我的霍格沃茨通知书，这对我十分重要，谢谢大家。
-        </p>
-          
-        <button type="button" class="w3-right w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-right w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment" onclick="window.location.href='chat_room';"></i>  Chat</button>
-      </div>
-      
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="https://www.mp3pc.com/uploads/151d2030f31f3c8034840367c55ae0c3.jpg" 
-        alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity">16 min</span>
-        <h4>Jane Watson</h4><br>
-        <hr class="w3-clear">
-        <p>
-            我是小明，一名退役熬夜选手、回笼觉表演专家、晚睡协会常任理事、赖床锦标赛冠军得主、国家一级熬夜运动员、
-            国家一级嗜睡症演员、晚睡协会常任理事、空间午夜冲浪达人、诺贝尔重度失眠获奖者、熬夜秃头选拔赛环球形象大使。
-        </p>
-        <button type="button" class="w3-right w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-right w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Chat</button> 
-      </div>  
 
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="https://www.mp3pc.com/uploads/d7111d9c21b384ee112181a0c1ba12c3.jpg" 
-        alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity">32 min</span>
-        <h4>Angie Jane</h4><br>
-        <hr class="w3-clear">
-        <p>Have you seen this?</p>
-        <p>
-            我是小美不睡觉，国际认证的著名奶茶鉴定家、幼儿园抢饭第一名、夜宵外卖一品鉴赏师、大胃王中华区形象大使、吃火锅比赛全国第一名、
-            撸串大赛一等奖获得者、中国大陆非著名美食博主、不愿面对现实的奶茶爱好者、吉尼斯世界纪录“怎么减肥也减不下来”记录保持者，饭桶成精正是在下。
-        </p>
-        <button type="button" class="w3-right w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-right w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Chat</button> 
-      </div> 
-      
-    <!-- End Middle Column -->
-    </div>
-    
-    <!-- Right Column -->
-    <div class="w3-col m2">
-      <div class="w3-card w3-round w3-white w3-center">
-        <div class="w3-container">
-          <p>Upcoming Date:</p>
-          <img src="https://i0.hdslb.com/bfs/bangumi/image/99e62fe75cda9d99450df0460307a73d65cf1578.jpg@200w_268h.webp" 
-          alt="Forest" style="width:100%;">
-          <p><strong>绿皮书（Green Book）</strong></p>
-          <p>6 Apr,2022</p>
-          <p>Friday 15:00</p>
-          <p><button class="w3-button w3-block w3-theme-l4">With John Doe</button></p>
+            <!-- End Left Column -->
         </div>
-      </div>
-      <br>
-      
-      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+
+        <!-- Middle Column -->
+        <div class="w3-col m7">
+
+            <div class="w3-row-padding">
+                <div class="w3-col m12">
+                    <div class="w3-card w3-round w3-white">
+                        <div class="w3-container w3-padding">
+                            <h6 class="w3-opacity">You have watched a movie, please write down your comments!</h6>
+                            <p contenteditable="true" class="w3-border w3-padding">I can't believe it. It's so good!</p>
+                            <button type="button" class="w3-right w3-button w3-theme"><i class="fa fa-pencil"></i>  Post
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+                <img src="https://img2.woyaogexing.com/2020/04/02/47b8913c3f6b425fa9e73b563f91e921!400x400.jpeg"
+                     alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                <span class="w3-right w3-opacity">1 min</span>
+                <h4>John Doe</h4><br>
+                <hr class="w3-clear">
+                <p>
+                    我是大明plus，我来自一个普通的麻瓜家庭。不过，我十分确定我有十分优秀的巫师潜力，我有预感，最终会有霍格沃兹的猫头鹰来给我递送录取通知书。
+                    各位同学，如果看到了一头白色的猫头鹰，请一定要联系我，那是我的霍格沃茨通知书，这对我十分重要，谢谢大家。
+                </p>
+
+                <button type="button" class="w3-right w3-button w3-theme-d1 w3-margin-bottom"><i
+                        class="fa fa-thumbs-up"></i>  Like
+                </button>
+                <button type="button" class="w3-right w3-button w3-theme-d2 w3-margin-bottom">
+                    <i class="fa fa-comment" onclick="window.location.href='/chat_room';"></i>
+                     Chat
+                </button>
+            </div>
+
+            <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+                <img src="https://www.mp3pc.com/uploads/151d2030f31f3c8034840367c55ae0c3.jpg"
+                     alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                <span class="w3-right w3-opacity">16 min</span>
+                <h4>Jane Watson</h4><br>
+                <hr class="w3-clear">
+                <p>
+                    我是小明，一名退役熬夜选手、回笼觉表演专家、晚睡协会常任理事、赖床锦标赛冠军得主、国家一级熬夜运动员、
+                    国家一级嗜睡症演员、晚睡协会常任理事、空间午夜冲浪达人、诺贝尔重度失眠获奖者、熬夜秃头选拔赛环球形象大使。
+                </p>
+                <button type="button" class="w3-right w3-button w3-theme-d1 w3-margin-bottom"><i
+                        class="fa fa-thumbs-up"></i>  Like
+                </button>
+                <button type="button" class="w3-right w3-button w3-theme-d2 w3-margin-bottom"><i
+                        class="fa fa-comment"></i>  Chat
+                </button>
+            </div>
+
+            <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+                <img src="https://www.mp3pc.com/uploads/d7111d9c21b384ee112181a0c1ba12c3.jpg"
+                     alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                <span class="w3-right w3-opacity">32 min</span>
+                <h4>Angie Jane</h4><br>
+                <hr class="w3-clear">
+                <p>Have you seen this?</p>
+                <p>
+                    我是小美不睡觉，国际认证的著名奶茶鉴定家、幼儿园抢饭第一名、夜宵外卖一品鉴赏师、大胃王中华区形象大使、吃火锅比赛全国第一名、
+                    撸串大赛一等奖获得者、中国大陆非著名美食博主、不愿面对现实的奶茶爱好者、吉尼斯世界纪录“怎么减肥也减不下来”记录保持者，饭桶成精正是在下。
+                </p>
+                <button type="button" class="w3-right w3-button w3-theme-d1 w3-margin-bottom"><i
+                        class="fa fa-thumbs-up"></i>  Like
+                </button>
+                <button type="button" class="w3-right w3-button w3-theme-d2 w3-margin-bottom"><i
+                        class="fa fa-comment"></i>  Chat
+                </button>
+            </div>
+
+            <!-- End Middle Column -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="w3-col m2">
+            <div class="w3-card w3-round w3-white w3-center">
+                <div class="w3-container">
+                    <p>Upcoming Date:</p>
+                    <img src="https://i0.hdslb.com/bfs/bangumi/image/99e62fe75cda9d99450df0460307a73d65cf1578.jpg@200w_268h.webp"
+                         alt="Forest" style="width:100%;">
+                    <p><strong>绿皮书（Green Book）</strong></p>
+                    <p>6 Apr,2022</p>
+                    <p>Friday 15:00</p>
+                    <p>
+                        <button class="w3-button w3-block w3-theme-l4">With John Doe</button>
+                    </p>
+                </div>
+            </div>
+            <br>
+
+            <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
         <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
           <i class="fa fa-remove"></i>
         </span>
-        <div class="w3-container w3-center">
-            <p>Friend Request</p>
-            <img src="https://img2.woyaogexing.com/2020/04/02/84cde53b95cb4179888beec648cabf49!400x400.jpeg" 
-            alt="Avatar" style="width:50%"><br>
-            <span>Jane Doe</span>
-            <div class="w3-row w3-opacity">
-              <div class="w3-half">
-                <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
-              </div>
-              <div class="w3-half">
-                <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
-              </div>
+                <div class="w3-container w3-center">
+                    <p>Friend Request</p>
+                    <img src="https://img2.woyaogexing.com/2020/04/02/84cde53b95cb4179888beec648cabf49!400x400.jpeg"
+                         alt="Avatar" style="width:50%"><br>
+                    <span>Jane Doe</span>
+                    <div class="w3-row w3-opacity">
+                        <div class="w3-half">
+                            <button class="w3-button w3-block w3-green w3-section" title="Accept"><i
+                                    class="fa fa-check"></i></button>
+                        </div>
+                        <div class="w3-half">
+                            <button class="w3-button w3-block w3-red w3-section" title="Decline"><i
+                                    class="fa fa-remove"></i></button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-      </div>
-      <br>
+            <br>
 
 
+            <!-- End Right Column -->
+        </div>
 
-      
-
-    <!-- End Right Column -->
+        <!-- End Grid -->
     </div>
-    
-  <!-- End Grid -->
-  </div>
-  
-<!-- End Page Container -->
+
+    <!-- End Page Container -->
 </div>
 <br>
 
 
- <!-- Footer -->
+<!-- Footer -->
 <footer class="w3-container w3-grey w3-padding-32 w3-margin-top">
 
     <button class="w3-button w3-black w3-padding-large w3-margin-bottom">
-      <a href="https://baike.baidu.com/item/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%9F%8E/6298" 
-      target="_blank">购票邀约»</a></button>
-  
-      <div class="w3-container w3-dark-grey">
-        <p> Powered by  <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">开心往前飞</a></p>
-      </div>
-  </footer>
+        <a href="https://baike.baidu.com/item/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%9F%8E/6298"
+           target="_blank">购票邀约»</a></button>
 
+    <div class="w3-container w3-dark-grey">
+        <p> Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">开心往前飞</a></p>
+    </div>
+</footer>
 
 
 <script>
-// Accordion
-function myFunction(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-    x.previousElementSibling.className += " w3-theme-d1";
-  } else { 
-    x.className = x.className.replace("w3-show", "");
-    x.previousElementSibling.className = 
-    x.previousElementSibling.className.replace(" w3-theme-d1", "");
-  }
-}
+    // Accordion
+    function myFunction(id) {
+        const x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            x.previousElementSibling.className += " w3-theme-d1";
+        } else {
+            x.className = x.className.replace("w3-show", "");
+            x.previousElementSibling.className =
+                x.previousElementSibling.className.replace(" w3-theme-d1", "");
+        }
+    }
 
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
+    // Used to toggle the menu on smaller screens when clicking on the menu button
+    function openNav() {
+        const x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
 </script>
 
 </body>

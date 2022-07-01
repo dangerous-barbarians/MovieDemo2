@@ -1,6 +1,6 @@
 {#主页界面#}
 <!DOCTYPE html>
-<html>
+<html lang="">
 <head>
     <title>主页</title>
     <meta charset="UTF-8">
@@ -11,36 +11,29 @@
 
 <!-- Navbar (sit on top) -->
 <nav>
-    <div class="w3-top">
-        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-            <div class="w3-top" style="width: 100%">
-                <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-                    <b class="w3-bar-item w3-button">开心往前飞</b>
-                    <a href="/" class="w3-bar-item w3-button"> 首页</a>
-                    <a href="https://baidu.com" target="_blank" class="w3-bar-item w3-button">登录/注册</a>
-                    <a href="/home_page" target="_blank" class="w3-bar-item w3-button">个人主页</a>
-                {#  <a href="javascript:" onClick="window.location.href='https://baidu.com'">新窗口</a>#}
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <b class="w3-bar-item w3-button">开心往前飞</b>
+        <a href="/" class="w3-bar-item w3-button"> 首页</a>
+        <a href="#" target="_self" class="w3-bar-item w3-button">登录/注册</a>
+        <a href="home_page" target="_self" class="w3-bar-item w3-button">个人主页</a>
 
-                </div>
-            </div>
-
-            <!-- Float links to the right. Hide them on small screens -->
-            <div class="w3-right w3-hide-small">
-                <a href="#Hot" class="w3-bar-item w3-small w3-button">热映中</a>
-                <a href="#projects" class="w3-bar-item w3-small w3-button">精品推荐</a>
-                <a href="#contact" class="w3-bar-item w3-small w3-button">即将上映</a>
-                <a href="#Search" class="w3-bar-item w3-small w3-button">搜索</a>
-            </div>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+            <a href="#Hot" class="w3-bar-item w3-small w3-button"><span>热映中</span></a>
+            <a href="#projects" class="w3-bar-item w3-small w3-button"><span>精品推荐</span></a>
+            <a href="#contact" class="w3-bar-item w3-small w3-button"><span>即将上映</span></a>
+            <a href="#Search" class="w3-bar-item w3-small w3-button"><span>搜索</span></a>
         </div>
     </div>
+</div>
 </nav>
-<div class="layui-row" style="margin-top:70px">
-    &nbsp;
+<div class="layui-row" style="margin-top:30px">&nbsp;
 </div>
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
     <img class="w3-image"
-         src="https://ts1.cn.mm.bing.net/th/id/R-C.357ec4d695dc013f33138245e7889cbe?rik=TP8F0pr3ZT7VeA&riu=http%3a%2f%2fimage.qianye88.com%2fpic%2f563d9914f2c8cb13979a72f1d02667a0&ehk=u7jCrvRDegA8k1Nms06Mckj9l61jAWbQiwmJEew%2b1dg%3d&risl=&pid=ImgRaw&r=0v"
+         src="../static/img/header.jpg"
          alt="Architecture" width="1500" height="800">
     <div class="w3-display-middle w3-margin-top w3-center">
         <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min">

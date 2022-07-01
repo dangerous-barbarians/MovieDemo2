@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/css/Blurry_Loading.css" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/Blurry_Loading.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <title>Blurry Loading</title>
-  </head>
-  <body>
-    <section class="bg"></section>
-    <div class="loading-text">0%</div>
+</head>
+<body>
+<section class="bg"></section>
 
-    <script src="../static/js/Blurry_Loading.js"></script>
-  </body>
+<div class="loading-text">0%</div>
+
+<!--
+<div>
+       <button type="button" onclick="window.location.href='/';">一起看电影吧</button>
+</div>
+-->
+
+<div class="content">
+    <h1 data-text="Identity V">
+        <button onclick="window.location.href='/';">Identity V</button>
+    </h1>
+
+</div>
+
+<script>
+    var input = document.getElementsByTagName("input");
+    //给input注册按钮事件，用addEventListenner(注意兼容问题）
+    input.addEventListener("keyup", function (event) {
+        //要阻止默认事件
+        event.preventDefault();
+        //我要的是enter件，也就是enter事件，所以要判断是哪个事件
+        if (event.keyCode === 13) {
+            document.getElementsByTagName("button").click();
+        }
+
+    })
+</script>
+<script src="../static/js/Blurry_Loading.js"></script>
+</body>
 </html>
