@@ -46,14 +46,14 @@ html, body {
     height: 360px;
     filter: grayscale(80%);
     background-size: cover;
-    z-index: -3;
+    z-index: auto;
     position: relative;
     user-select: none;
     -webkit-user-select: none;
 }
 
 
-h1 {
+a {
     font-family: 'ZCOOL KuaiLe', cursive;
     margin: 0;
     font-size: 4rem;
@@ -67,8 +67,8 @@ h1 {
     font-style: italic;
 }
 
-h1::before,
-h1::after {
+a::before,
+a::after {
     content: attr(data-text);
     position: absolute;
     top: 0;
@@ -78,12 +78,12 @@ h1::after {
     z-index: -1;
 }
 
-h1::after {
+a::after {
     -webkit-text-stroke: 17px #fff;
     z-index: -2;
 }
 
-h1:nth-child(2) {
+a:nth-child(2) {
     margin-top: -12px;
     font-size: 1.5rem;
 }

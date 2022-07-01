@@ -21,12 +21,14 @@
 -->
 
 <div class="content">
-    <h1 data-text="Identity V">
-        <button onclick="window.location.href='/';">Identity V</button>
+<!--    <h1 data-text="一起看电影吧">
+        <button onclick="window.location.href='/';">一起看电影吧</button>
     </h1>
-
+     -->
+    <a href="/index_page">一起看电影吧</a>
 </div>
 
+<script src="../static/js/Blurry_Loading.js"></script>
 <script>
     var input = document.getElementsByTagName("input");
     //给input注册按钮事件，用addEventListenner(注意兼容问题）
@@ -37,9 +39,8 @@
         if (event.keyCode === 13) {
             document.getElementsByTagName("button").click();
         }
-
     })
 </script>
-<script src="../static/js/Blurry_Loading.js"></script>
+
 </body>
 </html>

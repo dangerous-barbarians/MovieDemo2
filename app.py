@@ -7,6 +7,11 @@ app = Flask(__name__, template_folder='templates')
 
 
 @app.route('/')
+def loading():
+	return render_template("Blurry_Loading.html")
+
+
+@app.route('/index_page')
 def index():  # put application's code here
 	return render_template("index.html")
 
