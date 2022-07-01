@@ -47,7 +47,7 @@ def chat_room():
 
 # 个人主页界面
 @app.route('/home_page', methods=['POST', 'GET'])
-def index():
+def home_page():
 	data = houduan.data
 	yaoyue = houduan.yaoyue
 	return render_template("home_page.html", data=data, yaoyue=yaoyue, friend=houduan.dic)
