@@ -16,12 +16,13 @@
         <div class="w3-bar w3-white w3-wide w3-padding w3-card">
             <b class="w3-bar-item w3-button">开心往前飞</b>
             <a href="/" class="w3-bar-item w3-button"> 首页</a>
-            <a href="/login" target="_blank" class="w3-bar-item w3-button">登录</a>
-            <a href="/register" target="_blank" class="w3-bar-item w3-button">注册</a>
-            <a href="#" target="_blank" class="w3-bar-item w3-button">个人主页</a>
+            <a href="/login"  class="w3-bar-item w3-button" >登录</a>
+            <a href="/register" class="w3-bar-item w3-button">注册</a>
+            <a href="/home_page"  class="w3-bar-item w3-button" >个人主页</a>
         </div>
     </div>
 </nav>
+
 <div class="wrap">
     <img src="../static/img/1.jpg" class="imgStyle" alt="meitule">
     <div class="registerForm">
@@ -60,8 +61,7 @@
                     </div>
                     <div class="passwordDiv2">
                         <i class="layui-icon  adminIcon"></i>
-                        <input id="registerPassword" class="layui-input adminInput" type="password"
-                               name="registerPassword"
+                        <input id="registerPassword" class="layui-input adminInput" type="password" name="registerPassword"
                                placeholder="输入密码">
                     </div>
                 </div>
@@ -71,8 +71,7 @@
                     </div>
                     <div class="passwordDiv2">
                         <i class="layui-icon  adminIcon"></i>
-                        <input id="registerPassword2" class="layui-input adminInput" type="password"
-                               name="registerPassword2"
+                        <input id="registerPassword2" class="layui-input adminInput" type="password" name="registerPassword2"
                                placeholder="确认密码">
                     </div>
                 </div>
@@ -269,57 +268,5 @@
             });
         }
     }
-
-    // 注册流程
-    {#function register1() {#}
-    {#    layer.open({#}
-    {#        type: '1',#}
-    {#        content: $('.registerPage'),#}
-    {#        title: '注册',#}
-    {#        area: ['430px', '400px'],#}
-    {#        btn: ['注册', '重置', '取消'],#}
-    {#        closeBtn: '1',#}
-    {#        btn1: function (index, layero) {#}
-    {#            //注册回调#}
-    {#            layer.close(index);#}
-    {#            var registerUsername = $('#registerUsername').val();#}
-    {#            var registerPassword = $('#registerPassword').val();#}
-    {#            var registerWellPassword = $('#registerWellPassword').val();#}
-    {#            var selectValue = $('#roleSelect option:selected').val();#}
-    {#            var params = {};#}
-    {#            params.registerUsername = registerUsername;#}
-    {#            params.registerPassword = registerPassword;#}
-    {#            params.registerWellPassword = registerWellPassword;#}
-    {#            params.selectValue = selectValue;#}
-    {#            var registerLoadIndex = layer.load(2);#}
-    {#            $.ajax({#}
-    {#                type: 'post',#}
-    {#                url: window.location.protocol + '//' + window.location.host + '/security-web/register.do',#}
-    {#                dataType: 'json',#}
-    {#                data: JSON.stringify(params),#}
-    {#                contentType: 'application/json',#}
-    {#                success: function (data) {#}
-    {#                    layer.close(registerLoadIndex);#}
-    {#                    layer.msg(data);#}
-    {#                },#}
-    {#                error: function () {#}
-    {#                    layer.close(registerLoadIndex);#}
-    {#                    layer.alert("请求超时！")#}
-    {#                }#}
-    {#            });#}
-    {#        },#}
-    {#        btn2: function (index, layero) {#}
-    {#            //重置回调#}
-    {#            var registerUsername = $('#registerUsername').val("");#}
-    {#            var registerPassword = $('#registerPassword').val("");#}
-    {#            var registerWellPassword = $('#registerWellPassword').val("");#}
-    {#            // 防止注册页面关闭#}
-    {#            return false;#}
-    {#        },#}
-    {#        btn3: function (index, layero) {#}
-    {#            //取消回调#}
-    {#        }#}
-    {#    })#}
-    //}
 </script>
 </html>
