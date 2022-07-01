@@ -87,6 +87,33 @@ def xiugaimima():
 	flag = '修改成功'
 	return flag
 
+# 登录的路由
+@app.route('/login',methods=['POST','GET'])
+def login():
+	return render_template("login.html")
+
+# 验证登陆的路由
+@app.route('/denglupanduan',methods=['POST','GET'])
+def login_judge():
+	flag = '1'
+	print(1)
+	return flag
+
+# 注册的路由
+@app.route('/register',methods=['POST','GET'])
+def register():
+	print('1')
+	return render_template('register.html')
+
+
+# 验证注册的路由
+@app.route('/zhucepanduan',methods=['POST','GET'])
+def register_judge():
+	registerUsername = request.form.get('registerUsername')
+	print(registerUsername)
+	print('1')
+	flag = '1'
+	return flag
 
 if __name__ == '__main__':
 	app.run()

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <script src="../static/layui/layui.js" type="text/javascript"></script>
+    <script src="../static/js/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../static/layui/css/layui.css">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="stylesheet" href="../static/css/register.css">
+</head>
+<body>
+<nav>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <b class="w3-bar-item w3-button">开心往前飞</b>
+            <a href="/" class="w3-bar-item w3-button"> 首页</a>
+            <a href="/login" target="_blank" class="w3-bar-item w3-button">登录</a>
+            <a href="/register" target="_blank" class="w3-bar-item w3-button">注册</a>
+            <a href="#" target="_blank" class="w3-bar-item w3-button">个人主页</a>
+        </div>
+    </div>
+</nav>
+<div class="wrap">
+    <img src="../static/img/1.jpg" class="imgStyle" alt="meitule">
+    <div class="registerForm">
+        <form method="post">
+            <div class="logoHead2">
+                <h2>开心往前飞</h2>
+            </div>
+            <!-- 用户名联系方式的这一栏-->
+            <div class="usernameWrapDiv2">
+                <div class="usernameWrapDiv2half">
+                    <div class="usernameLabel2">
+                        <label>用户名:</label>
+                    </div>
+                    <div class="usernameDiv2">
+                        <i class="layui-icon layui-icon-username adminIcon"></i>
+                        <input id="registerUsername" class="layui-input adminInput" type="text" name="registerUsername"
+                               placeholder="输入用户名">
+                    </div>
+                </div>
+                <div class="usernameWrapDiv2half">
+                    <div class="usernameLabel2">
+                        <label>联系方式:</label>
+                    </div>
+                    <div class="usernameDiv2">
+                        <i class="layui-icon layui-icon-cellphone adminIcon"></i>
+                        <input id="phone" class="layui-input adminInput" type="text" name="phone"
+                               placeholder="输入联系方式">
+                    </div>
+                </div>
+            </div>
+            <!-- 密码的这一栏-->
+            <div class="usernameWrapDiv2">
+                <div class="usernameWrapDiv2half">
+                    <div class="usernameLabel2">
+                        <label>密码:</label>
+                    </div>
+                    <div class="passwordDiv2">
+                        <i class="layui-icon  adminIcon"></i>
+                        <input id="registerPassword" class="layui-input adminInput" type="password"
+                               name="registerPassword"
+                               placeholder="输入密码">
+                    </div>
+                </div>
+                <div class="usernameWrapDiv2half">
+                    <div class="usernameLabel2">
+                        <label>确认密码:</label>
+                    </div>
+                    <div class="passwordDiv2">
+                        <i class="layui-icon  adminIcon"></i>
+                        <input id="registerPassword2" class="layui-input adminInput" type="password"
+                               name="registerPassword2"
+                               placeholder="确认密码">
+                    </div>
+                </div>
+            </div>
+            <!-- 住址的这一栏-->
+            <div class="usernameWrapDiv2">
+                <div class="usernameWrapDiv2half" style="width: 400px;">
+                    <div class="usernameLabel2">
+                        <label>住址:</label>
+                    </div>
+                    <div class="usernameDiv2">
+                        <i class="layui-icon layui-icon-location locationIcon"></i>
+                        <input id="location" class="layui-input locationInput" type="text" name="location"
+                               placeholder="输入详细地址地址">
+                    </div>
+                </div>
+                <div class="usernameWrapDiv2half" style="width: 100px">
+                    <div class="usernameLabel2" style="padding-left: 15px">
+                        <label>性别:</label>
+                    </div>
+                    <div class="usernameDiv2">
+                        <label>
+                            <span style="font-size: 16px;display: inline-block">男</span>
+                            <input type="radio" class="sexInput" id="sex" name="sex" value="男"
+                                   title="男" checked="">
+                        </label>
+                        &nbsp;&nbsp;
+                        <label>
+                            <span style="font-size: 16px;display: inline-block">女</span>
+                            <input type="radio" class="sexInput" id="sex" name="sex" value="女"
+                                   title="女">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- 个人简介的这一栏-->
+            <div class="usernameWrapDiv3">
+                <div class="usernameLabel2">
+                    <label>个人简介:</label>
+                </div>
+                <div class="usernameDiv3">
+                    <textarea placeholder="请输入内容" class="layui-textarea" id="profile" name="profile"></textarea>
+                </div>
+            </div>
+            <!-- 验证码的这一栏-->
+            <div class="usernameWrapDiv2">
+                <div class="usernameLabel2">
+
+                </div>
+                <div class="usernameLabel2">
+                    <label>验证码:</label>
+                </div>
+                <div class="cardDiv">
+                    <input id="loginCard" class="layui-input cardInput" type="text" name="card" placeholder="输入验证码">
+                </div>
+                <div class="codeDiv">
+                    <input id="loginCode" class="layui-input codeInput" type="button">
+                </div>
+            </div>
+            <div class="usernameWrapDiv2">
+                <div class="submitLabel2">
+                    <label>已经有账号？<a href="/login" id="loginRegister">快去登录</a></label>
+                </div>
+                <div class="submitDiv2">
+                    <input id="Register"   type="button" class="submit layui-btn layui-btn-primary" value="注册">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+
+<script>
+    layui.use(['layer'], function () {
+        var layer = layui.layer;
+    })
+    $(function () {
+        // 页面初始化生成验证码
+        window.onload = createCode('#loginCode');
+        // 验证码切换
+        $('#loginCode').click(function () {
+            createCode('#loginCode');
+        });
+        // 注册事件
+        $('#Register').click(function () {
+            register();
+        });
+    });
+
+    // 生成验证码
+    function createCode(codeID) {
+        var code = "";
+        // 验证码长度
+        var codeLength = 4;
+        // 验证码dom元素
+        var checkCode = $(codeID);
+        // 验证码随机数
+        var random = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+            'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+        for (var i = 0; i < codeLength; i++) {
+            // 随机数索引
+            var index = Math.floor(Math.random() * 36);
+            code += random[index];
+        }
+        // 将生成的随机验证码赋值
+        checkCode.val(code);
+    }
+
+    // 校验验证码、用户名、密码
+    function validateCode(inputID, codeID) {
+        var inputCode = $(inputID).val().toUpperCase();
+        var cardCode = $(codeID).val();
+        var registerUsername = $('#registerUsername').val();
+        var registerPassword = $('#registerPassword').val();
+        var registerPassword2 = $('#registerPassword2').val();
+        var phone = $('#phone').val();
+        var adress = $('#location').val();
+        var profile = $('#profile').val();
+        if ($.trim(registerUsername) === '' || $.trim(registerUsername).length <= 0) {
+            layer.alert("用户名不能为空");
+            return false;
+        }
+        if ($.trim(registerPassword) === '' || $.trim(registerPassword).length <= 0) {
+            layer.alert("密码不能为空");
+            return false;
+        }
+        if ($.trim(registerPassword2) === '' || $.trim(registerPassword2).length <= 0 || registerPassword !== registerPassword2) {
+            layer.alert("两次密码不一致");
+            return false;
+        }
+        if ($.trim(phone) === '' || $.trim(phone).length <= 0) {
+            layer.alert("联系方式不能为空");
+            return false;
+        }
+        if ($.trim(adress) === '' || $.trim(adress).length <= 0) {
+            layer.alert("地址不能为空");
+            return false;
+        }
+        if ($.trim(profile) === '' || $.trim(profile).length <= 0) {
+            layer.alert("个人简介不能为空");
+            return false;
+        }
+        if (inputCode.length <= 0) {
+            layer.alert("验证码不能为空");
+            return false;
+        }
+        if (inputCode !== cardCode) {
+            layer.alert("请输入正确验证码");
+            return false;
+        }
+        return true;
+    }
+
+    // 注册流程
+    function register() {
+        if (!validateCode('#loginCard', '#loginCode')) {
+            //阻断提示
+        } else {
+            var registerUsername = $('#registerUsername').val();
+            var registerPassword = $('#registerPassword').val();
+            var adress = $('#location').val();
+            var profile = $('#profile').val();
+            var phone = $('#phone').val();
+            var sex = $("input[name='sex']:checked").val();
+            var loginLoadIndex = layer.load(2);
+            alert(sex);
+            $('#Register').val("正在注册...");
+            $.ajax({
+                type: 'post',
+                url: '/zhucepanduan',
+                data: {
+                    'registerUsername': registerUsername,
+                    'registerPassword': registerPassword,
+                    'adress':adress,
+                    'profile':profile,
+                    'phone':phone,
+                    'sex':sex
+                },
+                contentType: 'application/json',
+                success: function (data) {
+                    layer.close(loginLoadIndex);
+                    if (data === '1') {
+                        alert('注册成功')
+                        $(location).attr('href', '/login')
+                    } else {
+                        $('#Register').val("登录");
+                        layer.alert("用户名已存在");
+                    }
+                },
+                error: function () {
+                    layer.close(loginLoadIndex);
+                    $('#Register').val("登录");
+                }
+            });
+        }
+    }
+
+    // 注册流程
+    {#function register1() {#}
+    {#    layer.open({#}
+    {#        type: '1',#}
+    {#        content: $('.registerPage'),#}
+    {#        title: '注册',#}
+    {#        area: ['430px', '400px'],#}
+    {#        btn: ['注册', '重置', '取消'],#}
+    {#        closeBtn: '1',#}
+    {#        btn1: function (index, layero) {#}
+    {#            //注册回调#}
+    {#            layer.close(index);#}
+    {#            var registerUsername = $('#registerUsername').val();#}
+    {#            var registerPassword = $('#registerPassword').val();#}
+    {#            var registerWellPassword = $('#registerWellPassword').val();#}
+    {#            var selectValue = $('#roleSelect option:selected').val();#}
+    {#            var params = {};#}
+    {#            params.registerUsername = registerUsername;#}
+    {#            params.registerPassword = registerPassword;#}
+    {#            params.registerWellPassword = registerWellPassword;#}
+    {#            params.selectValue = selectValue;#}
+    {#            var registerLoadIndex = layer.load(2);#}
+    {#            $.ajax({#}
+    {#                type: 'post',#}
+    {#                url: window.location.protocol + '//' + window.location.host + '/security-web/register.do',#}
+    {#                dataType: 'json',#}
+    {#                data: JSON.stringify(params),#}
+    {#                contentType: 'application/json',#}
+    {#                success: function (data) {#}
+    {#                    layer.close(registerLoadIndex);#}
+    {#                    layer.msg(data);#}
+    {#                },#}
+    {#                error: function () {#}
+    {#                    layer.close(registerLoadIndex);#}
+    {#                    layer.alert("请求超时！")#}
+    {#                }#}
+    {#            });#}
+    {#        },#}
+    {#        btn2: function (index, layero) {#}
+    {#            //重置回调#}
+    {#            var registerUsername = $('#registerUsername').val("");#}
+    {#            var registerPassword = $('#registerPassword').val("");#}
+    {#            var registerWellPassword = $('#registerWellPassword').val("");#}
+    {#            // 防止注册页面关闭#}
+    {#            return false;#}
+    {#        },#}
+    {#        btn3: function (index, layero) {#}
+    {#            //取消回调#}
+    {#        }#}
+    {#    })#}
+    //}
+</script>
+</html>
