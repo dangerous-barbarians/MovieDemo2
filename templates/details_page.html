@@ -1,0 +1,196 @@
+{# 电影详情页面#}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ data[1] }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <script src="../static/jquery/jquery-1.10.2.min.js"></script>
+    <style>
+        body, h1, h2, h3, h4, h5 {
+            font-family: "Raleway", sans-serif
+        }
+
+        body {
+            color: rgb(79, 110, 147)
+        }
+    </style>
+</head>
+
+<body>
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32">
+    <div class="w3-container w3-center w3-animate-top">
+        <h1>{{ data[1] }}</h1>
+        <p>{{ data[2] }}</p>
+    </div>
+    <div class="w3-container w3-light-grey">
+        <p><i>{{ data[3] }}</i></p>
+    </div>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+    <!-- Blog entries -->
+    <div class="w3-col l8 s12">
+        <!-- Blog entry -->
+        <div class="w3-card-4 w3-margin w3-white">
+            <img src="{{ data[6] }}"
+                 alt="Nature" style="width:100%">
+            <div class="w3-container">
+                <h3><b>{{ data[1] }}</b></h3>
+                <h5>上映日期： <span class="w3-opacity">{{ data[4] }}</span></h5>
+            </div>
+
+            <div class="w3-container">
+                <p> {{ data[5] }}</p>
+                <div class="w3-row">
+                    <div class="w3-col m8 s12">
+                        <p>
+                            <button class="w3-button w3-padding-large w3-white w3-border" id="yaoyue">
+                                <a href="/invite_page" target="_blank">
+                                    <b>进入邀约 »</b></a>
+                            </button>
+                        </p>
+                    </div>
+                    <div class="w3-col m4 w3-hide-small">
+                        <p><span class="w3-padding-large w3-right"><b>预约人数  </b> <span class="w3-tag">{{ data[7] }}
+          </span></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Blog entry -->
+        {#  <div class="w3-card-4 w3-margin w3-white">#}
+        {#  <img src="https://img0.baidu.com/it/u=4020405800,552789056&fm=253&fmt=auto&app=138&f=JPEG?w=890&h=500" #}
+        {#  alt="Norway" style="width:100%" height="50%">#}
+        {#    <div class="w3-container">#}
+        {#      <h3><b>天空之城(天空の城ラピュタ)</b></h3>#}
+        {#      <h5>上映日期：<span class="w3-opacity">1986年8月2日(日本)</span></h5>#}
+        {#    </div>#}
+        {##}
+        {#    <div class="w3-container">#}
+        {#      <p>《天空之城》是由吉卜力工作室、德间书店联合制作的动画电影，由宫崎骏执导，田中真弓、横泽启子、初井言荣、寺田农等担任主要配音。#}
+        {#        该片主要讲述了主人公少女希达和少年帕祖以及海盗、军队、穆斯卡等人寻找天空之城拉普达的历险记。</p>#}
+        {#      <div class="w3-row">#}
+        {#        <div class="w3-col m8 s12">#}
+        {#          <p><button class="w3-button w3-padding-large w3-white w3-border">#}
+        {#            <a href="https://baike.baidu.com/item/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%9F%8E/6298" #}
+        {#            target="_blank"><b>READ MORE »</b></a></button></p>#}
+        {#        </div>#}
+        {#        <div class="w3-col m4 w3-hide-small">#}
+        {#          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">88</span></span></p>#}
+        {#        </div>#}
+        {#      </div>#}
+        {#    </div>#}
+        {#  </div>#}
+        <!-- END BLOG ENTRIES -->
+    </div>
+
+    <!-- Introduction menu -->
+    <div class="w3-col l4">
+        <!-- About Card -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <img src="{{ data[6] }}" alt="加载失败" style="width:100%">
+            <div class="w3-container w3-white">
+                <h4><b>{{ data[8] }}</b></h4>
+                <p>宫崎骏，1941年1月5日出生于日本东京都文京区，日本动画师、动画制作人、漫画家、动画导演、动画编剧。毕业于日本东京学习院大学政治经济部。
+                    1986年执导《天空之城》，该片获得第41回每日电影奖大藤信郎赏等6项大奖。1988年执导《龙猫》，该片荣获第13回报知电影奖最佳导演奖等24项大奖。
+                    2001年执导《千与千寻》，该片荣获第75届奥斯卡金像奖最佳动画长片奖、第52届柏林国际电影节金熊奖等9项大奖。
+                </p>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Posts -->
+        <div class="w3-card w3-margin">
+            <div class="w3-container w3-padding">
+                <h4>角色介绍</h4>
+            </div>
+            <ul class="w3-ul w3-hoverable w3-white">
+                <li class="w3-padding-16">
+                    <img src="https://bkimg.cdn.bcebos.com/pic/728da9773912b31bb0512bea9b49217adab44bed4bec?x-bce-process=image/crop,x_0,y_0,w_443,h_583/resize,m_lfit,h_780,limit_1/quality,Q_70/format,f_auto"
+                         alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                    <span class="w3-large">千寻 （配音：柊瑠美）</span><br>
+                    <span>10岁的小学四年级生，随父母搬家到新城镇，在搬迁的路上，误入鬼怪神灵休息的世界。
+            为了拯救变成猪的父母，在小白的帮助下，她留在澡堂“汤屋”工作，逐渐成长。汤婆婆为了控制来到这里的人，将她名字改为小千。
+            最后帮助白龙想起了自己的名字，解除身上的咒语。</span>
+                </li>
+                <li class="w3-padding-16">
+                    <img src="https://bkimg.cdn.bcebos.com/pic/b21bb051f8198618367a0c5b57bc39738bd4b21c48e8?x-bce-process=image/crop,x_0,y_0,w_443,h_583/resize,m_lfit,h_780,limit_1/quality,Q_70/format,f_auto"
+                         alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                    <span class="w3-large">白龙 （配音：赈早见琥珀主）</span><br>
+                    <span>曾经生活在人类世界一条叫做“琥珀川”的河流里的龙，但因为河流被人类掩埋而无家可归，来到汤屋在汤婆婆门下学魔法，是澡堂的实际管理人员，
+            汤婆婆的得力助手。他在千寻小的时候救过落水的千寻，并且记得她的名字。为此他冒险给了千寻很多帮助。</span>
+                </li>
+                <li class="w3-padding-16">
+                    <img src="https://bkimg.cdn.bcebos.com/pic/91529822720e0cf3d7ca72e61417e51fbe096b637cd7?x-bce-process=image/crop,x_0,y_0,w_443,h_583/resize,m_lfit,h_780,limit_1/quality,Q_70/format,f_auto"
+                         alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                    <span class="w3-large">汤婆婆 （配音：夏木真理）</span><br>
+                    <span>澡堂“汤屋”的主管，同时也是镇上的管理人。她还经常会化身为黑翅膀的大鸟出门巡视，命令凡是不工作的人都要变成猪被吃掉，而为她工作的人都会被拿掉名字，一旦记不起来，就永远都离开不了她的澡堂了。
+            然而，她对澡堂的客人却是百依百顺，笑脸相迎，每天都在房间里数钱记账，是一个十足的吝啬小老板形象。</span>
+                </li>
+                <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+                    <img src="https://bkimg.cdn.bcebos.com/pic/f11f3a292df5e0fe9925ded6413123a85edf8cb1d491?x-bce-process=image/crop,x_0,y_0,w_443,h_583/resize,m_lfit,h_780,limit_1/quality,Q_70/format,f_auto"
+                         alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                    <span class="w3-large">无脸男 （配音：中村彰男）</span><br>
+                    <span>神秘的鬼怪，全身黑色，头带一个白色面具。是一个渴望朋友的人，从一开始就在澡堂门口的桥上对小千产生兴趣，而最初也只有小千能看得到他，
+            小千以为他是澡堂的客人，让他进来避雨，更加强了他对小千的喜爱。然而他在澡堂里逐渐受到了金钱和世俗的影响，成了一个可以变出金子，不停地吃东西甚至吃人的怪物。</span>
+                </li>
+            </ul>
+        </div>
+        <hr>
+
+        <!-- Labels / tags -->
+        {#  <div class="w3-card w3-margin">#}
+        {#    <div class="w3-container w3-padding">#}
+        {#      <h4>获奖记录</h4>#}
+        {#    </div>#}
+        {#    <div class="w3-container w3-white">#}
+        {#    <p>#}
+        {#      <span class="w3-tag w3-light-grey w3-margin-bottom">第75届奥斯卡金像奖</span>#}
+        {#      <span class="w3-tag w3-light-grey w3-margin-bottom">第52届柏林国际电影节</span> #}
+        {#      <span class="w3-tag w3-light-grey w3-margin-bottom">第21届香港电影金像奖</span> #}
+        {#      <span class="w3-tag w3-light-grey w3-margin-bottom">第15届欧洲环球银幕奖 提名</span>#}
+        {#      <span class="w3-tag w3-light-grey w3-margin-bottom">第28届法国电影凯撒奖 提名</span>#}
+        {#      <span class="w3-tag w3-light-grey w3-margin-bottom">第25届日本电影学院奖</span>#}
+        {#      <span class="w3-tag w3-light-grey w3-margin-bottom">第57届英国电影和电视艺术学院奖 提名</span>#}
+        {#      <span class="w3-tag w3-light-grey w3-margin-bottom">第30届安妮奖最佳动画长片</span>#}
+        {#    </p>#}
+        {#    </div>#}
+        {#  </div>#}
+
+        <!-- END Introduction Menu -->
+    </div>
+
+    <!-- END GRID -->
+</div>
+<br>
+<div>
+    <!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-grey w3-padding-32 w3-margin-top">
+    <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+
+    <button class="w3-button w3-black w3-padding-large w3-margin-bottom">
+        <a href="https://baike.baidu.com/item/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%9F%8E/6298"
+           target="_blank">购票邀约»</a></button>
+
+    <div class="w3-container w3-dark-grey">
+        <p> Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">开心往前飞</a></p>
+    </div>
+</footer>
+
+</body>
+<script>
+    $()
+</script>
+</html>
