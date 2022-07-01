@@ -1,4 +1,7 @@
-from flask import Flask, render_template
+import json
+
+from flask import Flask, render_template, request
+import houduan
 
 app = Flask(__name__, template_folder='templates')
 
@@ -30,12 +33,6 @@ def details_page():
 	return render_template('details_page.html', data=dic)
 
 
-# 个人主页界面
-@app.route('/home_page')
-def home_page():
-	return render_template("home_page.html")
-
-
 # 用户邀约界面
 @app.route('/invite_page')
 def invite_page():
@@ -46,6 +43,49 @@ def invite_page():
 @app.route('/chat_room')
 def chat_room():
 	return render_template("chat_room.html")
+
+
+# 个人主页界面
+@app.route('/home_page', methods=['POST', 'GET'])
+def index():
+	data = houduan.data
+	yaoyue = houduan.yaoyue
+	return render_template("home_page.html", data=data, yaoyue=yaoyue, friend=houduan.dic)
+
+
+# 修改信息的路由
+@app.route('/xiugaixinxi', methods=['POST'])
+def xiugaixinxi():
+	head_portrait = request.form.get('head_portrait')
+	gender = request.form.get('gender')
+	age = request.form.get('age')
+	self_introduction = request.form.get('self_introduction')
+	current_address = request.form.get('current_address')
+	phone_number = request.form.get('phone_number')
+	if age != "":
+		houduan.data['age'] = age
+	if gender != "":
+		houduan.data['sex'] = gender
+	if phone_number != "":
+		houduan.data['phone'] = phone_number
+	if current_address != "":
+		houduan.data['adderss'] = current_address
+	if head_portrait != "":
+		houduan.data['touxiang'] = head_portrait
+	if self_introduction != "":
+		houduan.data['breif'] = self_introduction
+	flag = '修改成功'
+	flag = json.dumps(flag, ensure_ascii=False)
+	return flag
+
+
+# 修改密码的路由
+@app.route('/xiugaimima', methods=['POST'])
+def xiugaimima():
+	xinmima = request.form.get('xinmima')
+	houduan.data['password'] = xinmima
+	flag = '修改成功'
+	return flag
 
 
 if __name__ == '__main__':
