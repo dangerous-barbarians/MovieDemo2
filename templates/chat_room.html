@@ -1,12 +1,13 @@
+{# 聊天室界面#}
 <!doctype html>
-<html lang="">
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>聊天室</title>
-
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Favicon -->
     <link rel="icon" href="../static/chat_module/dist/media/img/favicon.png" type="image/png">
 
@@ -58,7 +59,7 @@
                 <li class="logo">
                     <a href="#">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             x="0px" y="0px"
                              width="612px" height="612px" viewBox="0 0 612 612"
                              style="enable-background:new 0 0 612 612;" xml:space="preserve">
                             <g>
@@ -419,6 +420,27 @@
                     </div>
                 </div>
             </div>
+            <!-- 弹窗内容 -->
+            <div class="w3-container">
+
+                <div id="id01" class="w3-modal">
+                    <div class="w3-modal-content w3-animate-top w3-pale-red">
+                        <header class="w3-container w3-teal w3-pale-red">
+                      <span onclick="document.getElementById('id01').style.display='none'"
+                            class="w3-button w3-display-topright">&times;</span>
+                            <h1>Invite Success</h1>
+                        </header>
+                        <div class="w3-container">
+                            <p>恭喜您成功领取到了10元优惠券</p>
+                            <p>领取金额:</p>
+                        </div>
+                        <footer class="w3-container w3-teal w3-pale-red">
+                            <p>注：有效期至</p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
             <div class="chat-footer">
                 <form>
                     <div>
@@ -428,7 +450,9 @@
                     </div>
                     <input type="text" class="form-control" placeholder="Write a message.">
                     <div class="form-buttons">
-                        <button class="btn btn-light" data-toggle="tooltip" title="Add files" type="button">
+                        <button class="btn btn-light" data-toggle="tooltip"
+                                onclick="document.getElementById('id01').style.display='block'" title="邀约"
+                                type="button">
                             <i data-feather="paperclip"></i>
                         </button>
                         <button class="btn btn-light d-sm-none d-block" data-toggle="tooltip"
@@ -441,25 +465,26 @@
                     </div>
                 </form>
             </div>
+
         </div>
         <!-- ./ chat -->
 
         <!-- ./ content -->
-
     </div>
-    <!-- ./ layout -->
 
-    <!-- Bundle -->
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../static/chat_module/vendor/bundle.js"></script>
-    <script src="../static/chat_module/vendor/feather.min.js"></script>
-    <script src="../static/chat_module/vendor/enjoyhint/enjoyhint.min.js"></script>
-
-    <!-- App scripts -->
-    <script src="../static/chat_module/dist/js/app.min.js"></script>
-
-    <!-- Examples -->
-    <script src="../static/chat_module/dist/js/examples.js"></script>
 </div>
+<!-- ./ layout -->
+
+<!-- Bundle -->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../static/chat_module/vendor/bundle.js"></script>
+<script src="../static/chat_module/vendor/feather.min.js"></script>
+<script src="../static/chat_module/vendor/enjoyhint/enjoyhint.min.js"></script>
+
+<!-- App scripts -->
+<script src="../static/chat_module/dist/js/app.min.js"></script>
+
+<!-- Examples -->
+<script src="../static/chat_module/dist/js/examples.js"></script>
 </body>
 </html>
