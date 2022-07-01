@@ -1,3 +1,4 @@
+{#主页界面#}
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,21 +10,33 @@
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
-    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-        <a href="#home" class="w3-bar-item w3-button"><b>开心往前飞</b>首页</a>
-        <a href="./homepage.html" target="_blank" class="w3-bar-item w3-button">个人主页</a>
+<nav>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <div class="w3-top" style="width: 100%">
+                <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+                    <b class="w3-bar-item w3-button">开心往前飞</b>
+                    <a href="/" class="w3-bar-item w3-button"> 首页</a>
+                    <a href="https://baidu.com" target="_blank" class="w3-bar-item w3-button">登录/注册</a>
+                    <a href="/home_page" target="_blank" class="w3-bar-item w3-button">个人主页</a>
+                {#  <a href="javascript:" onClick="window.location.href='https://baidu.com'">新窗口</a>#}
 
-        <!-- Float links to the right. Hide them on small screens -->
-        <div class="w3-right w3-hide-small">
-            <a href="#Hot" class="w3-bar-item w3-small w3-button">热映中</a>
-            <a href="#projects" class="w3-bar-item w3-small w3-button">精品推荐</a>
-            <a href="#contact" class="w3-bar-item w3-small w3-button">即将上映</a>
-            <a href="#Search" class="w3-bar-item w3-small w3-button">搜索</a>
+                </div>
+            </div>
+
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="#Hot" class="w3-bar-item w3-small w3-button">热映中</a>
+                <a href="#projects" class="w3-bar-item w3-small w3-button">精品推荐</a>
+                <a href="#contact" class="w3-bar-item w3-small w3-button">即将上映</a>
+                <a href="#Search" class="w3-bar-item w3-small w3-button">搜索</a>
+            </div>
         </div>
     </div>
+</nav>
+<div class="layui-row" style="margin-top:70px">
+    &nbsp;
 </div>
-
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
     <img class="w3-image"
@@ -51,7 +64,9 @@
                 <p>4000人想看 15269人看过</p>
                 <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i>
                 </p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom">我想看</button>
+                <button class="w3-button w3-block w3-black w3-margin-bottom"
+                        onclick="window.location.href='details_page';">我想看
+                </button>
             </div>
         </div>
         <div class="w3-third w3-margin-bottom">
