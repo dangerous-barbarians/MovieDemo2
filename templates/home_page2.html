@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>信息修改+好友列表</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style> html, body, h1, h2, h3, h4, h5 { font-family: "Raleway", sans-serif} </style>
+</head>
+<body class="w3-light-grey">
+<div style="width: 90%;margin-left: 5%">
+<!-- Top container -->
+<!-- Navbar (sit on top) -->
+<div class="w3-top" style="width: 90%">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <b class="w3-bar-item w3-button">开心往前飞</b>
+        <a href="index.html" class="w3-bar-item w3-button">首页</a>
+        <a href="index.html" target="_blank" class="w3-bar-item w3-button">退出登录</a>
+    </div>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+    <div class="w3-container w3-row">
+        <div class="w3-col s4">
+            <img src="https://ts3.cn.mm.bing.net/th?id=OIP-C.9ZZva98r3IDj01xEtOOHbQAAAA&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2"
+                 class="w3-circle w3-margin-right" style="width:46px">
+        </div>
+        <div class="w3-col s8 w3-bar">
+            <span><strong>Welcome！</strong></span><br>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+        </div>
+    </div>
+    <hr>
+
+    <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+           onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <button class="w3-bar-item w3-button tablink w3-white" onclick="openCity(event, '好友')"><i
+                class="fa fa-users fa-fw"></i>  好友列表
+        </button>
+        <button class="w3-bar-item w3-button tablink w3-white" onclick="openCity(event, '基本信息')"><i
+                class="fa fa-cog fa-fw"></i>  信息设置
+        </button>
+        <button class="w3-bar-item w3-button tablink w3-white" onclick="openCity(event, '基本信息')"><small>基本信息</small>
+        </button>
+        <button class="w3-bar-item w3-button tablink w3-white" onclick="openCity(event, '修改信息')"><small>修改信息</small>
+        </button>
+        <button class="w3-bar-item w3-button tablink w3-white" onclick="openCity(event, '修改密码')"><small>修改密码</small>
+        </button>
+        <button class="w3-bar-item w3-button tablink w3-white" onclick="openCity(event, '我的邀约')"><small>我的邀约</small>
+        </button>
+        <button class="w3-bar-item w3-button tablink w3-white" onclick="openCity(event, '我的优惠券')"><small>我的优惠券</small>
+        </button>
+        <br><br>
+    </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+     title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+    <!-- Header
+    <header class="w3-container" style="padding-top:22px">
+      <h5><b><i class="fa fa-dashboard"></i> My Friends</b></h5>
+    </header> -->
+    <br>
+
+    <div style="margin-left:10px">
+
+        <!-- 好友列表栏 -->
+        <div id="好友" class="w3-container city" style="display:none">
+            <div class="w3-container">
+                <br>
+                <ul class="w3-ul w3-card-4 w3-light-grey">
+                    <li class="w3-padding-16">
+                        <span class="w3-xlarge">Mike</span>
+                        <button class="w3-button w3-right w3-dark-grey">Chat  
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                        <br>
+                    </li>
+                    <li class="w3-padding-16">
+                        <span class="w3-xlarge">Jill</span>
+                        <button class="w3-button w3-right w3-dark-grey">Chat  
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                        <br>
+                    </li>
+                    <li class="w3-padding-16">
+                        <span class="w3-xlarge">Jane</span>
+                        <button class="w3-button w3-right w3-dark-grey">Chat  
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                        <br>
+                    </li>
+                    <li class="w3-padding-16">
+                        <span class="w3-xlarge">Jane</span>
+                        <button class="w3-button w3-right w3-dark-grey">Chat  
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                        <br>
+                    </li>
+                    <li class="w3-padding-16">
+                        <span class="w3-xlarge">Jane</span>
+                        <button class="w3-button w3-right w3-dark-grey">Chat  
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                        <br>
+                    </li>
+                    <li class="w3-padding-16">
+                        <span class="w3-xlarge">Jane</span>
+                        <button class="w3-button w3-right w3-dark-grey">Chat  
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                        <br>
+                    </li>
+                    <li class="w3-padding-16">
+                        <span class="w3-xlarge">Jane</span>
+                        <button class="w3-button w3-right w3-dark-grey">Chat  
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                        <br>
+                    </li>
+                    <li class="w3-padding-16">
+                        <span class="w3-xlarge">Jane</span>
+                        <button class="w3-button w3-right w3-dark-grey">Chat  
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                        <br>
+                    </li>
+                    <li class="w3-padding-16">
+                        <span class="w3-xlarge">Jane</span>
+                        <button class="w3-button w3-right w3-dark-grey">Chat  
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                        <br>
+                    </li>
+                    <li class="w3-padding-16">
+                        <span class="w3-xlarge">Jane</span>
+                        <button class="w3-button w3-right w3-dark-grey">Chat  
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                        <br>
+                    </li>
+                    <li class="w3-padding-16">
+                        <span class="w3-xlarge">Jane</span>
+                        <button class="w3-button w3-right w3-dark-grey">Chat  
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                        <br>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <br>
+        </div>
+        <!-- 好友列表end -->
+
+        <!-- 基本信息 +信息设置 -->
+        <div id="基本信息" class="w3-container city">
+            <h2>Information Settlement</h2>
+            <div class="w3-container">
+                <h3><i>The Basic Information</i></h3>
+
+                <div class="w3-container" id="contact">
+
+                    <form action="/action_page.php" target="_blank">
+                        <h6 class="w3-opacity">用户名：</h6>
+                        <p contenteditable="true" class="w3-border w3-padding">小明</p>
+                        <h6 class="w3-opacity">性别</h6>
+                        <p contenteditable="true" class="w3-border w3-padding">男</p>
+                        <h6 class="w3-opacity">联系方式：</h6>
+                        <p contenteditable="true" class="w3-border w3-padding">1234567895</p>
+                        <h6 class="w3-opacity">年龄：</h6>
+                        <p contenteditable="true" class="w3-border w3-padding">100</p>
+                        <h6 class="w3-opacity">所在位置：</h6>
+                        <p contenteditable="true" class="w3-border w3-padding">美国省纽约市</p>
+                        <h6 class="w3-opacity">个人简介</h6>
+                        <p contenteditable="true" class="w3-border w3-padding">今天晚上吃什么</p>
+
+                        <button type="logout" class="w3-button w3-green w3-third ">退出登录</button>
+                    </form>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+        <!-- 基本信息 +信息设置 end-->
+
+        <!-- 修改信息 -->
+        <div id="修改信息" class="w3-container city" style="display:none">
+            <h2>Information Settlement</h2>
+            <div class="w3-container">
+                <h3><i>Modify the Information</i></h3>
+
+                <div class="w3-container" id="contact">
+                    <form action="/action_page.php" target="_blank">
+                        <h6 class="w3-opacity">用户名：（不可修改）</h6>
+                        <p contenteditable="true" class="w3-border w3-padding">小明 </p>
+                        <p>性别：<input class="w3-input w3-border" type="text" placeholder="Sex" required name="Sex"></p>
+                        <p>联系方式：<input class="w3-input w3-border" type="text" placeholder="Phone Number" required
+                                       name="Phone Number"></p>
+                        <p>年龄<input class="w3-input w3-border" type="text" placeholder="Age" required name="Age"></p>
+                        <p>所在位置<input class="w3-input w3-border" type="text" placeholder="Address" required
+                                      name="Address"></p>
+                        <p>个人简介<input class="w3-input w3-border" type="text" placeholder="Self-introduction" required
+                                      name="Self-introduction"></p>
+                        <p>头像<input class="w3-input w3-border" type="text" placeholder="Selfie" required name="Selfie">
+                        </p>
+                        <button type="submit" class="w3-button w3-green w3-third ">Submit</button>
+                    </form>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+        <!-- 修改信息 end-->
+
+        <!-- 修改密码 -->
+        <div id="修改密码" class="w3-container city" style="display:none">
+            <h2>Information Settlement</h2>
+            <div class="w3-container">
+                <h3><i>Change The Password</i></h3>
+                <div class="w3-container" id="contact">
+                    <form action="/action_page.php" target="_blank">
+                        <p>旧密码：<input class="w3-input w3-border" type="text" placeholder="（必填）" required name="旧密码"></p>
+                        <p>新密码：<input class="w3-input w3-border" type="text" placeholder="（必填）" required name="新密码"></p>
+                        <p>确认新密码：<input class="w3-input w3-border" type="text" placeholder="（必填 请再次输入新密码）" required
+                                        name="确认新密码"></p>
+                        <button type="submit" class="w3-button w3-green w3-third ">Submit</button>
+                    </form>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+        <!-- 修改密码 end-->
+
+
+        <!-- 我的邀约-->
+        <div id="我的邀约" class="w3-container city" style="display:none">
+            <h2>Information Settlement</h2>
+            <div class="w3-container">
+                <h3><i>My Invitations</i></h3>
+
+                <button class="w3-button w3-block w3-left-align w3-gray">
+                    2023年6月1日
+                </button>
+                <div id="Demo2" class="w3-container">
+                    <p>电影：肖申克的救赎</p>
+                    <p>受邀者：小美</p>
+                </div>
+
+                <button class="w3-button w3-block w3-left-align w3-gray">
+                    2023年6月2日
+                </button>
+                <div id="Demo2" class="w3-container">
+                    <p>电影：肖申克的救赎</p>
+                    <p>受邀者：小美</p>
+                </div>
+
+                <button class="w3-button w3-block w3-left-align w3-gray">
+                    2023年6月3日
+                </button>
+                <div id="Demo2" class="w3-container">
+                    <p>电影：肖申克的救赎</p>
+                    <p>受邀者：小美</p>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+        <!-- 我的邀约 end-->
+
+        <!-- 我的优惠券-->
+        <div id="我的优惠券" class="w3-container city" style="display:none">
+            <h2>Information Settlement</h2>
+            <div class="w3-container">
+                <h3><i>My Coupons</i></h3>
+                <table class="w3-table-all w3-hoverable">
+                    <thead>
+                    <tr class="w3-light-grey">
+                        <th>优惠卷名称</th>
+                        <th>开始日期</th>
+                        <th>截止日期</th>
+                        <th>优惠金额</th>
+                    </tr>
+                    </thead>
+
+                    <tr>
+                        <td>一等卷</td>
+                        <td>2016-11-29</td>
+                        <td>2016-12-29</td>
+                        <td>50/200</td>
+                    </tr>
+                    <tr>
+                        <td>二等卷</td>
+                        <td>2016-11-29</td>
+                        <td>2016-12-29</td>
+                        <td>50/200</td>
+                    </tr>
+                    <tr>
+                        <td>三等卷</td>
+                        <td>2016-11-29</td>
+                        <td>2016-12-29</td>
+                        <td>50/200</td>
+                    </tr>
+
+                </table>
+                <br>
+                <br>
+            </div>
+        </div>
+        <!-- 我的优惠券end-->
+
+
+        <!-- Footer -->
+        <footer class="w3-container w3-padding-16 w3-grey">
+            <div class="w3-container w3-dark-grey">
+                <p> Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">开心往前飞</a></p>
+            </div>
+        </footer>
+
+        <!-- End page content -->
+    </div>
+</div>
+    </div>
+</body>
+<script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+        if (mySidebar.style.display === 'block') {
+            mySidebar.style.display = 'none';
+            overlayBg.style.display = "none";
+        } else {
+            mySidebar.style.display = 'block';
+            overlayBg.style.display = "block";
+        }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+        mySidebar.style.display = "none";
+        overlayBg.style.display = "none";
+    }
+
+    //选项栏
+    function openCity(evt, cityName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " w3-red";
+    }
+</script>
+</html>

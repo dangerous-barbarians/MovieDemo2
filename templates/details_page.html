@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>{{ data[1] }}</title>
+    <title>{{ movie['name'] }}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -37,8 +37,8 @@
 <!-- Header -->
 <header class="w3-container w3-center w3-padding-32">
     <div class="w3-container w3-center w3-animate-top">
-        <h1>{{ data[1] }} {{ movie['name'] }}</h1>
-        <p>{{ data[2] }}</p>
+        <h1>{{ movie['name'] }}</h1>
+{#        <p>{{ data[2] }}</p>#}
     </div>
     <div class="w3-container w3-light-grey">
         <p><i>{{ data[3] }}</i></p>
@@ -52,9 +52,9 @@
     <div class="w3-col l8 s12">
         <!-- Blog entry -->
         <div class="w3-card-4 w3-margin w3-white">
-            <img src="{{ data[6] }}" alt="Nature" style="width:100%">
+            <img src="{{ movie['picture'] }}" alt="Nature" style="width:100%">
             <div class="w3-container">
-                <h3><b>{{ data[1] }}</b></h3>
+                <h3><b>{{ movie['name'] }}</b></h3>
                 <h5>上映日期： <span class="w3-opacity">{{ data[4] }}</span></h5>
             </div>
 
@@ -112,9 +112,9 @@
     <div class="w3-col l4">
         <!-- About Card -->
         <div class="w3-card w3-margin w3-margin-top">
-            <img src="{{ data[6] }}" alt="加载失败" style="width:100%">
+            <img src="{{ movie['picture'] }}" alt="加载失败" style="width:100%">
             <div class="w3-container w3-white">
-                <h4><b>{{ data[8] }}</b></h4>
+                <h4><b>导演：{{ movie['daoyan'] }}</b></h4>
                 <p>宫崎骏，1941年1月5日出生于日本东京都文京区，日本动画师、动画制作人、漫画家、动画导演、动画编剧。毕业于日本东京学习院大学政治经济部。
                     1986年执导《天空之城》，该片获得第41回每日电影奖大藤信郎赏等6项大奖。1988年执导《龙猫》，该片荣获第13回报知电影奖最佳导演奖等24项大奖。
                     2001年执导《千与千寻》，该片荣获第75届奥斯卡金像奖最佳动画长片奖、第52届柏林国际电影节金熊奖等9项大奖。

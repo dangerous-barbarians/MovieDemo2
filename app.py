@@ -69,6 +69,13 @@ def home_page():
 	return render_template("home_page.html", data=data, yaoyue=yaoyue, friend=houduan.dic)
 
 
+# 个人主页界面
+@app.route('/home', methods=['POST', 'GET'])
+def home():
+	data = houduan.data
+	yaoyue = houduan.yaoyue
+	return render_template("home_page2.html", data=data, yaoyue=yaoyue, friend=houduan.dic)
+
 # 修改信息的路由
 @app.route('/xiugaixinxi', methods=['POST'])
 def xiugaixinxi():
