@@ -1,4 +1,4 @@
-.registerForm{
+.registerForm {
     margin-left: 30%;
     margin-top: 10%;
     /*background-color: #cccccc;*/
@@ -10,21 +10,25 @@
     position: fixed;
     opacity: 0.75;
 }
-.usernameWrapDiv2{
+
+.usernameWrapDiv2 {
     width: 600px;
     height: 70px;
 }
-.usernameWrapDiv3{
+
+.usernameWrapDiv3 {
     width: 600px;
     height: 120px;
 }
-.logoHead2{
+
+.logoHead2 {
     width: 600px;
     height: 60px;
     padding-left: 210px;
     padding-top: 25px;
 }
-.submitLabel2{
+
+.submitLabel2 {
     width: 160px;
     height: 30px;
     font-size: 13px;
@@ -33,14 +37,16 @@
     margin-top: 40px;
     cursor: pointer;
 }
-.submitDiv2{
+
+.submitDiv2 {
     width: 150px;
     height: 40px;
     padding-left: 20px;
     padding-top: 28px;
     float: left;
 }
-.usernameLabel2{
+
+.usernameLabel2 {
     width: 70px;
     height: 30px;
     font-size: 16px;
@@ -48,37 +54,43 @@
     margin-left: 25px;
     margin-top: 40px;
 }
-.usernameDiv2{
+
+.usernameDiv2 {
     width: 400px;
     height: 40px;
     padding-left: 90px;
     padding-top: 30px;
 }
-.usernameDiv3{
+
+.usernameDiv3 {
     width: 550px;
     height: 40px;
     padding-left: 100px;
     padding-top: 30px;
 }
-.usernameWrapDiv2half{
+
+.usernameWrapDiv2half {
     width: 300px;
     height: 70px;
     float: left;
 }
-.passwordDiv2{
+
+.passwordDiv2 {
     width: 300px;
     height: 40px;
     padding-left: 90px;
     padding-top: 28px;
 }
-.cardDiv{
+
+.cardDiv {
     width: 120px;
     height: 40px;
     padding-top: 28px;
     padding-left: 14px;
     float: left;
 }
-.adminInput{
+
+.adminInput {
     width: 200px;
     height: 40px;
     font-size: 15px;
@@ -87,7 +99,7 @@
     /*border: 1px solid #cccccc;*/
 }
 
-.locationInput{
+.locationInput {
     width: 300px;
     height: 40px;
     font-size: 15px;
@@ -95,12 +107,14 @@
     /*margin-left: auto;*/
     /*border: 1px solid #cccccc;*/
 }
-.locationIcon{
+
+.locationIcon {
     font-size: 22px;
     margin-top: 8px;
     margin-left: 265px;
 }
-.sexInput{
+
+.sexInput {
     margin-top: 14px;
     border-radius: 5em;
     transform: scale(1.3);

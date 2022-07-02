@@ -15,10 +15,10 @@
     <div class="w3-top">
         <div class="w3-bar w3-white w3-wide w3-padding w3-card">
             <b class="w3-bar-item w3-button">开心往前飞</b>
-            <a href="/" class="w3-bar-item w3-button"> 首页</a>
-            <a href="/login"  class="w3-bar-item w3-button" >登录</a>
+            <a href="/index_page" class="w3-bar-item w3-button">首页</a>
+            <a href="/login" class="w3-bar-item w3-button">登录</a>
             <a href="/register" class="w3-bar-item w3-button">注册</a>
-            <a href="/home_page"  class="w3-bar-item w3-button" >个人主页</a>
+            <a href="/home_page" class="w3-bar-item w3-button">个人主页</a>
         </div>
     </div>
 </nav>
@@ -61,7 +61,8 @@
                     </div>
                     <div class="passwordDiv2">
                         <i class="layui-icon  adminIcon"></i>
-                        <input id="registerPassword" class="layui-input adminInput" type="password" name="registerPassword"
+                        <input id="registerPassword" class="layui-input adminInput" type="password"
+                               name="registerPassword"
                                placeholder="输入密码">
                     </div>
                 </div>
@@ -71,7 +72,8 @@
                     </div>
                     <div class="passwordDiv2">
                         <i class="layui-icon  adminIcon"></i>
-                        <input id="registerPassword2" class="layui-input adminInput" type="password" name="registerPassword2"
+                        <input id="registerPassword2" class="layui-input adminInput" type="password"
+                               name="registerPassword2"
                                placeholder="确认密码">
                     </div>
                 </div>
@@ -136,7 +138,7 @@
                     <label>已经有账号？<a href="/login" id="loginRegister">快去登录</a></label>
                 </div>
                 <div class="submitDiv2">
-                    <input id="Register"   type="button" class="submit layui-btn layui-btn-primary" value="注册">
+                    <input id="Register" type="button" class="submit layui-btn layui-btn-primary" value="注册">
                 </div>
             </div>
         </form>
@@ -245,12 +247,11 @@
                 data: {
                     'registerUsername': registerUsername,
                     'registerPassword': registerPassword,
-                    'adress':adress,
-                    'profile':profile,
-                    'phone':phone,
-                    'sex':sex
+                    'adress': adress,
+                    'profile': profile,
+                    'phone': phone,
+                    'sex': sex
                 },
-                contentType: 'application/json',
                 success: function (data) {
                     layer.close(loginLoadIndex);
                     if (data === '1') {

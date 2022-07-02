@@ -14,16 +14,16 @@
     <div class="w3-top">
         <div class="w3-bar w3-white w3-wide w3-padding w3-card">
             <b class="w3-bar-item w3-button">开心往前飞</b>
-            <a href="/" class="w3-bar-item w3-button">首页</a>
-            <a href="/login"  class="w3-bar-item w3-button">登录</a>
+            <a href="/index_page" class="w3-bar-item w3-button">首页</a>
+            <a href="/login" class="w3-bar-item w3-button">登录</a>
             <a href="/register" class="w3-bar-item w3-button">注册</a>
-            <a href="/home_page"  class="w3-bar-item w3-button" >个人主页</a>
+            <a href="/home_page" class="w3-bar-item w3-button">个人主页</a>
         </div>
     </div>
 </nav>
 
 <div class="wrap">
-    <img src="../static/img/1.jpg" class="imgStyle">
+    <img src="../static/img/1.jpg" class="imgStyle" alt="">
     <div class="loginForm">
         <form method="post">
             <div class="logoHead">
@@ -152,13 +152,13 @@
             $('#loginBtn').val("正在登录...");
             $.ajax({
                 type: 'post',
-                url:'/denglupanduan',
+                url: '/denglupanduan',
                 //url: window.location.protocol + '//' + window.location.host + '/security-web/login.do',
                 //dataType: 'json',//改了之前是html
                 //data: JSON.stringify(params),
-                data:{
-                    'username':loginUsername,
-                    'password':loginPassword
+                data: {
+                    'username': loginUsername,
+                    'password': loginPassword
                 },
                 contentType: 'application/json',
                 success: function (data) {
@@ -167,9 +167,9 @@
                     //if (jsonData.code == '999') {
                     //    window.location.href = './static/templates/main.html';
                     //}
-                    if(data === '1'){
-                        $(location).attr('href','/')
-                    }else {
+                    if (data === '1') {
+                        $(location).attr('href', '/index_page')
+                    } else {
                         $('#loginBtn').val("登录");
                         layer.alert("用户名或密码错误");
                     }

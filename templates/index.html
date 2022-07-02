@@ -1,6 +1,6 @@
 {#主页界面#}
 <!DOCTYPE html>
-<html>
+<html lang="">
 <head>
     <title>主页</title>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
     <div class="w3-top">
         <div class="w3-bar w3-white w3-wide w3-padding w3-card">
             <b class="w3-bar-item w3-button">开心往前飞</b>
-            <a href="/" class="w3-bar-item w3-button"> 首页</a>
+            <a href="/index_page" class="w3-bar-item w3-button">首页</a>
             <a href="/login" class="w3-bar-item w3-button">登录</a>
             <a href="/register" class="w3-bar-item w3-button">注册</a>
             <a href="/home_page" class="w3-bar-item w3-button">个人主页</a>
@@ -29,19 +29,19 @@
         </div>
     </div>
 </nav>
-<div class="layui-row" style="margin-top:50px">
+<div class="layui-row" style="margin-top:30px">
     &nbsp;
 </div>
 <!-- 头部 -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-    <img class="w3-image" src="../static/img/index_1.jpg" alt="Architecture" width="1500" height="800">
+    <img class="w3-image" src="../static/img/header.jpg" alt="Architecture" width="1500" height="800">
     <div class="w3-display-middle w3-margin-top w3-center">
         <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min">
         <b>FLY</b></span> <span class="w3-hide-small w3-text-light-grey">MOVIES</span></h1>
     </div>
 </header>
 
-    <!-- 第一部分 热映中 -->
+<!-- 第一部分 热映中 -->
 <div class="w3-content w3-padding" style="max-width:1564px">
 
     <div class="w3-container w3-padding-32" id="Hot">
@@ -49,33 +49,42 @@
     </div>
     <div class="w3-row-padding w3-padding-16">
         <div class="w3-third w3-margin-bottom">
-            <img src="../static/img/index_2.jpg" alt="Norway" style="width:100%">
+            <img src="../static/img/index_2.jpg" alt="Norway" style="width:100%"
+                 onclick="window.location.href='details_page';">
             <div class="w3-container w3-white">
                 <h3>肖申克的救赎</h3>
                 <h6 class="w3-opacity">From ¥49</h6>
                 <p>4000人想看 15269人看过</p>
                 <p class="w3-large"></p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom" onclick="window.location.href='details_page?moviename='+'111';">我想看</button>
+                <button class="w3-button w3-block w3-black w3-margin-bottom"
+                        onclick="window.location.href='details_page?moviename='+'111';">我想看
+                </button>
             </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-            <img src="../static/img/index_2.jpg" alt="Norway" style="width:100%">
+            <img src="../static/img/index_2.jpg" alt="Norway" style="width:100%"
+                 onclick="window.location.href='details_page';">
             <div class="w3-container w3-white">
                 <h3>肖申克的救赎</h3>
                 <h6 class="w3-opacity">From ¥49</h6>
                 <p>4000人想看 15269人看过</p>
                 <p class="w3-large"></p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom" onclick="window.location.href='details_page';">我想看</button>
+                <button class="w3-button w3-block w3-black w3-margin-bottom"
+                        onclick="window.location.href='details_page';">我想看
+                </button>
             </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-            <img src="../static/img/index_2.jpg" alt="Norway" style="width:100%">
+            <img src="../static/img/index_2.jpg" alt="Norway" style="width:100%"
+                 onclick="window.location.href='details_page';">
             <div class="w3-container w3-white">
                 <h3>肖申克的救赎</h3>
                 <h6 class="w3-opacity">From ¥49</h6>
                 <p>4000人想看 15269人看过</p>
                 <p class="w3-large"></p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom" onclick="window.location.href='details_page';">我想看</button>
+                <button class="w3-button w3-block w3-black w3-margin-bottom"
+                        onclick="window.location.href='details_page';">我想看
+                </button>
             </div>
         </div>
     </div>
@@ -89,29 +98,29 @@
         <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-display-container">
                 <div class="w3-display-topleft w3-black w3-padding">爱乐之城</div>
-                <img src="https://pic4.zhimg.com/v2-e9c84e4fbdc2b7b43ae447071ad39ce0_1440w.jpg?source=172ae18b"
-                     alt="House" style="width:100%">
+                <img src="../static/img/index_3.jpg"
+                     alt="House" style="width:100%" onclick="window.location.href='details_page?moviename='+'111';">
             </div>
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-display-container">
                 <div class="w3-display-topleft w3-black w3-padding">爱乐之城</div>
-                <img src="https://pic4.zhimg.com/v2-e9c84e4fbdc2b7b43ae447071ad39ce0_1440w.jpg?source=172ae18b"
-                     alt="House" style="width:100%">
+                <img src="../static/img/index_3.jpg"
+                     alt="House" style="width:100%" onclick="window.location.href='details_page?moviename='+'111';">
             </div>
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-display-container">
                 <div class="w3-display-topleft w3-black w3-padding">爱乐之城</div>
-                <img src="https://pic4.zhimg.com/v2-e9c84e4fbdc2b7b43ae447071ad39ce0_1440w.jpg?source=172ae18b"
-                     alt="House" style="width:100%">
+                <img src="../static/img/index_3.jpg"
+                     alt="House" style="width:100%" onclick="window.location.href='details_page?moviename='+'111';">
             </div>
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-display-container">
                 <div class="w3-display-topleft w3-black w3-padding">爱乐之城</div>
-                <img src="https://pic4.zhimg.com/v2-e9c84e4fbdc2b7b43ae447071ad39ce0_1440w.jpg?source=172ae18b"
-                     alt="House" style="width:100%">
+                <img src="../static/img/index_3.jpg"
+                     alt="House" style="width:100%" onclick="window.location.href='details_page?moviename='+'111';">
             </div>
         </div>
     </div>
@@ -120,29 +129,29 @@
         <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-display-container">
                 <div class="w3-display-topleft w3-black w3-padding">爱乐之城</div>
-                <img src="https://pic4.zhimg.com/v2-e9c84e4fbdc2b7b43ae447071ad39ce0_1440w.jpg?source=172ae18b"
-                     alt="House" style="width:99%">
+                <img src="../static/img/index_3.jpg"
+                     alt="House" style="width:100%" onclick="window.location.href='details_page?moviename='+'111';">
             </div>
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-display-container">
                 <div class="w3-display-topleft w3-black w3-padding">爱乐之城</div>
-                <img src="https://pic4.zhimg.com/v2-e9c84e4fbdc2b7b43ae447071ad39ce0_1440w.jpg?source=172ae18b"
-                     alt="House" style="width:99%">
+                <img src="../static/img/index_3.jpg"
+                     alt="House" style="width:100%" onclick="window.location.href='details_page?moviename='+'111';">
             </div>
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-display-container">
                 <div class="w3-display-topleft w3-black w3-padding">爱乐之城</div>
-                <img src="https://pic4.zhimg.com/v2-e9c84e4fbdc2b7b43ae447071ad39ce0_1440w.jpg?source=172ae18b"
-                     alt="House" style="width:99%">
+                <img src="../static/img/index_3.jpg"
+                     alt="House" style="width:100%" onclick="window.location.href='details_page?moviename='+'111';">
             </div>
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-display-container">
                 <div class="w3-display-topleft w3-black w3-padding">爱乐之城</div>
-                <img src="https://pic4.zhimg.com/v2-e9c84e4fbdc2b7b43ae447071ad39ce0_1440w.jpg?source=172ae18b"
-                     alt="House" style="width:99%">
+                <img src="../static/img/index_3.jpg"
+                     alt="House" style="width:100%" onclick="window.location.href='details_page?moviename='+'111';">
             </div>
         </div>
     </div>
@@ -154,43 +163,55 @@
 
     <div class="w3-row-padding w3-grayscale">
         <div class="w3-col l3 m6 w3-margin-bottom">
-            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.529b05b63e0e5ca304c0f4a44f1b205b?rik=V1F3eL6tQfJ50A&riu=http%3a%2f%2fimg.doooor.com%2fimg%2fforum%2f201706%2f23%2f022959xqxx5sxxugxwnbiu.jpg&ehk=S8soDRdlFpzPD%2bZ4MowrvI%2fXcfbUEgaT3QCFGRgrvmM%3d&risl=&pid=ImgRaw&r=0"
-                 alt="John" style="width:100%">
+            <img src="../static/img/index_2.jpg"
+                 alt="John" style="width:100%"
+                 onclick="window.location.href='details_page?moviename='+'111';">
             <h3>肖申克的救赎</h3>
             <p class="w3-opacity">The Shawshank Redemption</p>
             <p>该片根据斯蒂芬·埃德温·金1982年的中篇小说《肖申克的救赎》改编，主要讲述了银行家安迪因被误判为枪杀妻子及其情人的罪名入狱后，他不动声色、步步为营地谋划自我拯救并最终成功越狱，重获自由的故事。</p>
             <p>
-                <button class="w3-button w3-light-grey w3-block">预约观看</button>
+                <button class="w3-button w3-light-grey w3-block"
+                        onclick="window.location.href='details_page?moviename='+'111';">预约观看
+                </button>
             </p>
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
-            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.529b05b63e0e5ca304c0f4a44f1b205b?rik=V1F3eL6tQfJ50A&riu=http%3a%2f%2fimg.doooor.com%2fimg%2fforum%2f201706%2f23%2f022959xqxx5sxxugxwnbiu.jpg&ehk=S8soDRdlFpzPD%2bZ4MowrvI%2fXcfbUEgaT3QCFGRgrvmM%3d&risl=&pid=ImgRaw&r=0"
-                 alt="Jane" style="width:100%">
+            <img src="../static/img/index_2.jpg"
+                 alt="John" style="width:100%"
+                 onclick="window.location.href='details_page?moviename='+'111';">
             <h3>肖申克的救赎</h3>
             <p class="w3-opacity">The Shawshank Redemption</p>
             <p>该片根据斯蒂芬·埃德温·金1982年的中篇小说《肖申克的救赎》改编，主要讲述了银行家安迪因被误判为枪杀妻子及其情人的罪名入狱后，他不动声色、步步为营地谋划自我拯救并最终成功越狱，重获自由的故事。</p>
             <p>
-                <button class="w3-button w3-light-grey w3-block">预约观看</button>
+                <button class="w3-button w3-light-grey w3-block"
+                        onclick="window.location.href='details_page?moviename='+'111';">预约观看
+                </button>
             </p>
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
-            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.529b05b63e0e5ca304c0f4a44f1b205b?rik=V1F3eL6tQfJ50A&riu=http%3a%2f%2fimg.doooor.com%2fimg%2fforum%2f201706%2f23%2f022959xqxx5sxxugxwnbiu.jpg&ehk=S8soDRdlFpzPD%2bZ4MowrvI%2fXcfbUEgaT3QCFGRgrvmM%3d&risl=&pid=ImgRaw&r=0"
-                 alt="Mike" style="width:100%">
+            <img src="../static/img/index_2.jpg"
+                 alt="John" style="width:100%"
+                 onclick="window.location.href='details_page?moviename='+'111';">
             <h3>肖申克的救赎</h3>
             <p class="w3-opacity">The Shawshank Redemption</p>
             <p>该片根据斯蒂芬·埃德温·金1982年的中篇小说《肖申克的救赎》改编，主要讲述了银行家安迪因被误判为枪杀妻子及其情人的罪名入狱后，他不动声色、步步为营地谋划自我拯救并最终成功越狱，重获自由的故事。</p>
             <p>
-                <button class="w3-button w3-light-grey w3-block">预约观看</button>
+                <button class="w3-button w3-light-grey w3-block"
+                        onclick="window.location.href='details_page?moviename='+'111';">预约观看
+                </button>
             </p>
         </div>
         <div class="w3-col l3 m6 w3-margin-bottom">
-            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.529b05b63e0e5ca304c0f4a44f1b205b?rik=V1F3eL6tQfJ50A&riu=http%3a%2f%2fimg.doooor.com%2fimg%2fforum%2f201706%2f23%2f022959xqxx5sxxugxwnbiu.jpg&ehk=S8soDRdlFpzPD%2bZ4MowrvI%2fXcfbUEgaT3QCFGRgrvmM%3d&risl=&pid=ImgRaw&r=0"
-                 alt="Dan" style="width:100%">
+            <img src="../static/img/index_2.jpg"
+                 alt="John" style="width:100%"
+                 onclick="window.location.href='details_page?moviename='+'111';">
             <h3>肖申克的救赎</h3>
             <p class="w3-opacity">The Shawshank Redemption</p>
             <p>该片根据斯蒂芬·埃德温·金1982年的中篇小说《肖申克的救赎》改编，主要讲述了银行家安迪因被误判为枪杀妻子及其情人的罪名入狱后，他不动声色、步步为营地谋划自我拯救并最终成功越狱，重获自由的故事。</p>
             <p>
-                <button class="w3-button w3-light-grey w3-block">预约观看</button>
+                <button class="w3-button w3-light-grey w3-block"
+                        onclick="window.location.href='details_page?moviename='+'111';">预约观看
+                </button>
             </p>
         </div>
     </div>
@@ -199,7 +220,7 @@
     <div class="w3-container w3-padding-32" id="Search">
         <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">搜索</h3>
         <p>输入你想观看的电影吧！</p>
-        <form action="/action_page.php" target="_blank">
+        <form action="/action_page.php" target="_self">
             <label>
                 <input class="w3-input w3-border w3-half" type="text" placeholder="Name" required name="Name">
             </label>

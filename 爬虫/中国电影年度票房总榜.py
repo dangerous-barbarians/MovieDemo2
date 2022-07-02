@@ -183,5 +183,5 @@ if __name__ == "__main__":
 	})
 	dataframe.to_csv('data' + name + '.csv', index=False, sep=',', encoding='gbk')
 	print('data' + name + '.csv')
-# 连续爬取时，随机延时，降低爬取速度，防止ip被封
+	# 连续爬取时，随机延时，降低爬取速度，防止ip被封
 	time.sleep(random.random() * 3)

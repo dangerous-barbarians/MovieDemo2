@@ -4,6 +4,7 @@ import houduan
 
 app = Flask(__name__, template_folder='templates')
 
+
 # 主页
 @app.route('/')
 def loading():
@@ -16,7 +17,7 @@ def index():  # put application's code here
 
 
 # 电影详情界面
-@app.route('/details_page',methods=['POST','GET'])
+@app.route('/details_page', methods=['POST', 'GET'])
 def details_page():
 	title = '肖申克的救赎'
 	stitle = '一切的一切都要从越狱说起'
@@ -48,12 +49,14 @@ def invite_page():
 def chat_room():
 	return render_template("chat_room.html")
 
+
 # 个人主页界面
 @app.route('/home_page', methods=['POST', 'GET'])
 def home_page():
 	data = houduan.data
 	yaoyue = houduan.yaoyue
 	return render_template("home_page.html", data=data, yaoyue=yaoyue, friend=houduan.dic)
+
 
 # 修改信息的路由
 @app.route('/xiugaixinxi', methods=['POST'])
@@ -80,6 +83,7 @@ def xiugaixinxi():
 	flag = json.dumps(flag, ensure_ascii=False)
 	return flag
 
+
 # 修改密码的路由
 @app.route('/xiugaimima', methods=['POST'])
 def xiugaimima():
@@ -88,26 +92,30 @@ def xiugaimima():
 	flag = '修改成功'
 	return flag
 
+
 # 登录界面
-@app.route('/login',methods=['POST','GET'])
+@app.route('/login', methods=['POST', 'GET'])
 def login():
 	return render_template("login.html")
 
+
 # 验证登陆的路由
-@app.route('/denglupanduan',methods=['POST','GET'])
+@app.route('/denglupanduan', methods=['POST', 'GET'])
 def login_judge():
 	flag = '1'
 	print(1)
 	return flag
 
+
 # 注册界面
-@app.route('/register',methods=['POST','GET'])
+@app.route('/register', methods=['POST', 'GET'])
 def register():
 	print('1')
 	return render_template('register.html')
 
+
 # 验证注册的路由
-@app.route('/zhucepanduan',methods=['POST','GET'])
+@app.route('/zhucepanduan', methods=['POST', 'GET'])
 def register_judge():
 	registerUsername = request.form.get('registerUsername')
 	print(registerUsername)
@@ -116,7 +124,7 @@ def register_judge():
 	return flag
 
 
-@app.route('/fly',methods=['POST','GET'])
+@app.route('/fly', methods=['POST', 'GET'])
 def fly():
 	return render_template('fly.html')
 

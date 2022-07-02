@@ -1,11 +1,12 @@
 /*登陆表单样式 start*/
-.wrap{
+.wrap {
     width: 100%;
     height: 100%;
     background: url("../img/1.jpg") no-repeat;
     background-size: cover;
 }
-.loginForm{
+
+.loginForm {
     margin-left: 35%;
     margin-top: 10%;
     /*background-color: #cccccc;*/
@@ -18,14 +19,14 @@
     opacity: 0.75;
 }
 
-.usernameDiv{
+.usernameDiv {
     width: 300px;
     height: 40px;
     padding-left: 130px;
     padding-top: 30px;
 }
 
-.adminInput{
+.adminInput {
     width: 200px;
     height: 40px;
     font-size: 15px;
@@ -33,33 +34,38 @@
     /*margin-left: auto;*/
     /*border: 1px solid #cccccc;*/
 }
-.passwordDiv{
+
+.passwordDiv {
     width: 300px;
     height: 40px;
     padding-left: 130px;
     padding-top: 28px;
 }
-.cardDiv{
+
+.cardDiv {
     width: 120px;
     height: 40px;
     padding-top: 28px;
     padding-left: 14px;
     float: left;
 }
-.cardInput{
+
+.cardInput {
     width: 124px;
     height: 40px;
     font-size: 15px;
     border-radius: 0.5em 0em 0em 0.5em;
 }
-.codeDiv{
+
+.codeDiv {
     width: 100px;
     height: 40px;
     padding-top: 28px;
     padding-right: 20px;
     float: left;
 }
-.codeInput{
+
+.codeInput {
     width: 80px;
     height: 40px;
     font-size: 15px;
@@ -72,21 +78,25 @@
     letter-spacing: 2px;
     cursor: pointer;
 }
-i{
+
+i {
     position: absolute;
 }
-.adminIcon{
+
+.adminIcon {
     font-size: 22px;
     margin-top: 8px;
     margin-left: 165px;
 }
-.logoHead{
+
+.logoHead {
     width: 300px;
     height: 60px;
     padding-left: 90px;
     padding-top: 25px;
 }
-.usernameLabel{
+
+.usernameLabel {
     width: 60px;
     height: 30px;
     font-size: 16px;
@@ -94,7 +104,8 @@ i{
     margin-left: 55px;
     margin-top: 40px;
 }
-.submitLabel{
+
+.submitLabel {
     width: 160px;
     height: 30px;
     font-size: 13px;
@@ -103,26 +114,31 @@ i{
     margin-top: 40px;
     cursor: pointer;
 }
-.usernameWrapDiv{
+
+.usernameWrapDiv {
     width: 400px;
     height: 70px;
 }
-.submitDiv{
+
+.submitDiv {
     width: 150px;
     height: 40px;
     padding-left: 10px;
     padding-top: 28px;
     float: left;
 }
-.submit{
+
+.submit {
     width: 100px;
     height: 40px;
     border-radius: 0.5em;
 }
-img{
+
+img {
     position: absolute;
 }
-.imgStyle{
+
+.imgStyle {
     width: 100%;
     height: 100%;
 }

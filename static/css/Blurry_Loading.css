@@ -26,6 +26,7 @@ body {
 }
 
 .loading-text {
+    align: center;
     font-size: 50px;
     color: #fff;
 }
@@ -42,8 +43,8 @@ html, body {
 }
 
 .content {
-    width: 606px;
-    height: 360px;
+    width: 1080px;
+    height: 720px;
     filter: grayscale(80%);
     background-size: cover;
     z-index: auto;
