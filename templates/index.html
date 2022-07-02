@@ -1,6 +1,6 @@
 {#主页界面#}
 <!DOCTYPE html>
-<html lang="">
+<html>
 <head>
     <title>主页</title>
     <meta charset="UTF-8">
@@ -11,37 +11,37 @@
 
 <!-- Navbar (sit on top) -->
 <nav>
-<div class="w3-top">
-    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-        <b class="w3-bar-item w3-button">开心往前飞</b>
-        <a href="/" class="w3-bar-item w3-button"> 首页</a>
-        <a href="#" target="_self" class="w3-bar-item w3-button">登录/注册</a>
-        <a href="home_page" target="_self" class="w3-bar-item w3-button">个人主页</a>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <b class="w3-bar-item w3-button">开心往前飞</b>
+            <a href="/" class="w3-bar-item w3-button"> 首页</a>
+            <a href="/login" class="w3-bar-item w3-button">登录</a>
+            <a href="/register" class="w3-bar-item w3-button">注册</a>
+            <a href="/home_page" class="w3-bar-item w3-button">个人主页</a>
 
-        <!-- Float links to the right. Hide them on small screens -->
-        <div class="w3-right w3-hide-small">
-            <a href="#Hot" class="w3-bar-item w3-small w3-button"><span>热映中</span></a>
-            <a href="#projects" class="w3-bar-item w3-small w3-button"><span>精品推荐</span></a>
-            <a href="#contact" class="w3-bar-item w3-small w3-button"><span>即将上映</span></a>
-            <a href="#Search" class="w3-bar-item w3-small w3-button"><span>搜索</span></a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="#Hot" class="w3-bar-item w3-small w3-button">热映中</a>
+                <a href="#projects" class="w3-bar-item w3-small w3-button">精品推荐</a>
+                <a href="#contact" class="w3-bar-item w3-small w3-button">即将上映</a>
+                <a href="#Search" class="w3-bar-item w3-small w3-button">搜索</a>
+            </div>
         </div>
     </div>
-</div>
 </nav>
-<div class="layui-row" style="margin-top:30px">&nbsp;
+<div class="layui-row" style="margin-top:50px">
+    &nbsp;
 </div>
-<!-- Header -->
+<!-- 头部 -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-    <img class="w3-image"
-         src="../static/img/header.jpg"
-         alt="Architecture" width="1500" height="800">
+    <img class="w3-image" src="../static/img/index_1.jpg" alt="Architecture" width="1500" height="800">
     <div class="w3-display-middle w3-margin-top w3-center">
         <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min">
-        <b>HP</b></span> <span class="w3-hide-small w3-text-light-grey">MOVIES</span></h1>
+        <b>FLY</b></span> <span class="w3-hide-small w3-text-light-grey">MOVIES</span></h1>
     </div>
 </header>
 
-<!-- Page content -->
+    <!-- 第一部分 热映中 -->
 <div class="w3-content w3-padding" style="max-width:1564px">
 
     <div class="w3-container w3-padding-32" id="Hot">
@@ -49,47 +49,38 @@
     </div>
     <div class="w3-row-padding w3-padding-16">
         <div class="w3-third w3-margin-bottom">
-            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.529b05b63e0e5ca304c0f4a44f1b205b?rik=V1F3eL6tQfJ50A&riu=http%3a%2f%2fimg.doooor.com%2fimg%2fforum%2f201706%2f23%2f022959xqxx5sxxugxwnbiu.jpg&ehk=S8soDRdlFpzPD%2bZ4MowrvI%2fXcfbUEgaT3QCFGRgrvmM%3d&risl=&pid=ImgRaw&r=0"
-                 alt="Norway" style="width:100%">
+            <img src="../static/img/index_2.jpg" alt="Norway" style="width:100%">
             <div class="w3-container w3-white">
                 <h3>肖申克的救赎</h3>
                 <h6 class="w3-opacity">From ¥49</h6>
                 <p>4000人想看 15269人看过</p>
-                <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i>
-                </p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom"
-                        onclick="window.location.href='details_page';">我想看
-                </button>
+                <p class="w3-large"></p>
+                <button class="w3-button w3-block w3-black w3-margin-bottom" onclick="window.location.href='details_page?moviename='+'111';">我想看</button>
             </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.529b05b63e0e5ca304c0f4a44f1b205b?rik=V1F3eL6tQfJ50A&riu=http%3a%2f%2fimg.doooor.com%2fimg%2fforum%2f201706%2f23%2f022959xqxx5sxxugxwnbiu.jpg&ehk=S8soDRdlFpzPD%2bZ4MowrvI%2fXcfbUEgaT3QCFGRgrvmM%3d&risl=&pid=ImgRaw&r=0"
-                 alt="Norway" style="width:100%">
+            <img src="../static/img/index_2.jpg" alt="Norway" style="width:100%">
             <div class="w3-container w3-white">
                 <h3>肖申克的救赎</h3>
                 <h6 class="w3-opacity">From ¥49</h6>
                 <p>4000人想看 15269人看过</p>
-                <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i
-                        class="fa fa-tv"></i></p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom">我想看</button>
+                <p class="w3-large"></p>
+                <button class="w3-button w3-block w3-black w3-margin-bottom" onclick="window.location.href='details_page';">我想看</button>
             </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.529b05b63e0e5ca304c0f4a44f1b205b?rik=V1F3eL6tQfJ50A&riu=http%3a%2f%2fimg.doooor.com%2fimg%2fforum%2f201706%2f23%2f022959xqxx5sxxugxwnbiu.jpg&ehk=S8soDRdlFpzPD%2bZ4MowrvI%2fXcfbUEgaT3QCFGRgrvmM%3d&risl=&pid=ImgRaw&r=0"
-                 alt="Norway" style="width:100%">
+            <img src="../static/img/index_2.jpg" alt="Norway" style="width:100%">
             <div class="w3-container w3-white">
                 <h3>肖申克的救赎</h3>
                 <h6 class="w3-opacity">From ¥49</h6>
                 <p>4000人想看 15269人看过</p>
-                <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i
-                        class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom">我想看</button>
+                <p class="w3-large"></p>
+                <button class="w3-button w3-block w3-black w3-margin-bottom" onclick="window.location.href='details_page';">我想看</button>
             </div>
         </div>
     </div>
 
-
-    <!-- Project Section -->
+    <!-- 第二部分 精品推荐 -->
     <div class="w3-container w3-padding-32" id="projects">
         <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">精品推荐</h3>
     </div>
@@ -156,7 +147,7 @@
         </div>
     </div>
 
-    <!-- contact Section -->
+    <!-- 第三部分 即将上演 -->
     <div class="w3-container w3-padding-32" id="contact">
         <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">即将上映</h3>
     </div>

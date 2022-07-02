@@ -1,11 +1,10 @@
 import json
-
 from flask import Flask, render_template, request
 import houduan
 
 app = Flask(__name__, template_folder='templates')
 
-
+# 主页
 @app.route('/')
 def loading():
 	return render_template("Blurry_Loading.html")
@@ -17,14 +16,14 @@ def index():  # put application's code here
 
 
 # 电影详情界面
-@app.route('/details_page')
+@app.route('/details_page',methods=['POST','GET'])
 def details_page():
 	title = '肖申克的救赎'
 	stitle = '一切的一切都要从越狱说起'
 	mingju = '"向往自由，向往生活"'
 	release_date = '2020-7-8'
 	brife = "小女孩千寻和父母一起在森林里迷了路，走过了一条神秘的隧道之后进入了一小镇。奇怪的是整个镇子一个人也没有。千寻的父母看到有一处店铺里存放着大量新"
-	img = "../static/img/肖申克.jpg"
+	img = "../static/img/1.jpg"
 	daoyan = "导演：宫崎骏"
 	dic = {}
 	dic[1] = title
@@ -49,14 +48,12 @@ def invite_page():
 def chat_room():
 	return render_template("chat_room.html")
 
-
 # 个人主页界面
 @app.route('/home_page', methods=['POST', 'GET'])
 def home_page():
 	data = houduan.data
 	yaoyue = houduan.yaoyue
 	return render_template("home_page.html", data=data, yaoyue=yaoyue, friend=houduan.dic)
-
 
 # 修改信息的路由
 @app.route('/xiugaixinxi', methods=['POST'])
@@ -83,7 +80,6 @@ def xiugaixinxi():
 	flag = json.dumps(flag, ensure_ascii=False)
 	return flag
 
-
 # 修改密码的路由
 @app.route('/xiugaimima', methods=['POST'])
 def xiugaimima():
@@ -91,6 +87,38 @@ def xiugaimima():
 	houduan.data['password'] = xinmima
 	flag = '修改成功'
 	return flag
+
+# 登录界面
+@app.route('/login',methods=['POST','GET'])
+def login():
+	return render_template("login.html")
+
+# 验证登陆的路由
+@app.route('/denglupanduan',methods=['POST','GET'])
+def login_judge():
+	flag = '1'
+	print(1)
+	return flag
+
+# 注册界面
+@app.route('/register',methods=['POST','GET'])
+def register():
+	print('1')
+	return render_template('register.html')
+
+# 验证注册的路由
+@app.route('/zhucepanduan',methods=['POST','GET'])
+def register_judge():
+	registerUsername = request.form.get('registerUsername')
+	print(registerUsername)
+	print('1')
+	flag = '1'
+	return flag
+
+
+@app.route('/fly',methods=['POST','GET'])
+def fly():
+	return render_template('fly.html')
 
 
 if __name__ == '__main__':

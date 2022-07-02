@@ -1,0 +1,107 @@
+.registerForm{
+    margin-left: 30%;
+    margin-top: 10%;
+    /*background-color: #cccccc;*/
+    background-color: #e7e7e7;
+    width: 610px;
+    height: 550px;
+    float: left;
+    z-index: 9999;
+    position: fixed;
+    opacity: 0.75;
+}
+.usernameWrapDiv2{
+    width: 600px;
+    height: 70px;
+}
+.usernameWrapDiv3{
+    width: 600px;
+    height: 120px;
+}
+.logoHead2{
+    width: 600px;
+    height: 60px;
+    padding-left: 210px;
+    padding-top: 25px;
+}
+.submitLabel2{
+    width: 160px;
+    height: 30px;
+    font-size: 13px;
+    float: left;
+    margin-left: 55px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.submitDiv2{
+    width: 150px;
+    height: 40px;
+    padding-left: 20px;
+    padding-top: 28px;
+    float: left;
+}
+.usernameLabel2{
+    width: 70px;
+    height: 30px;
+    font-size: 16px;
+    float: left;
+    margin-left: 25px;
+    margin-top: 40px;
+}
+.usernameDiv2{
+    width: 400px;
+    height: 40px;
+    padding-left: 90px;
+    padding-top: 30px;
+}
+.usernameDiv3{
+    width: 550px;
+    height: 40px;
+    padding-left: 100px;
+    padding-top: 30px;
+}
+.usernameWrapDiv2half{
+    width: 300px;
+    height: 70px;
+    float: left;
+}
+.passwordDiv2{
+    width: 300px;
+    height: 40px;
+    padding-left: 90px;
+    padding-top: 28px;
+}
+.cardDiv{
+    width: 120px;
+    height: 40px;
+    padding-top: 28px;
+    padding-left: 14px;
+    float: left;
+}
+.adminInput{
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 0.5em;
+    /*margin-left: auto;*/
+    /*border: 1px solid #cccccc;*/
+}
+
+.locationInput{
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 0.5em;
+    /*margin-left: auto;*/
+    /*border: 1px solid #cccccc;*/
+}
+.locationIcon{
+    font-size: 22px;
+    margin-top: 8px;
+    margin-left: 265px;
+}
+.sexInput{
+    margin-top: 14px;
+    border-radius: 5em;
+    transform: scale(1.3);
+}
