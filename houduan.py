@@ -6,7 +6,7 @@ sex = '男'
 phone = '121313313'
 adderss = '华中师范大学南湖校区'
 touxiang = '/static/img/1.jpg'
-breif = '我是一个大傻逼'
+breif = '我是一个大帅哥'
 data['name'] = username
 data['sex'] = sex
 data['phone'] = phone
@@ -36,3 +36,5 @@ dic[3] = friend3
 dic[4] = friend3
 dic[5] = friend3
 dic[6] = friend2
+
+

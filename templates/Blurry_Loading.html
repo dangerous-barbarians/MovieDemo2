@@ -10,37 +10,35 @@
     <title>Blurry Loading</title>
 </head>
 <body>
-<section class="bg"></section>
+    <section class="bg"></section>
 
-<div class="loading-text">0%</div>
+    <div class="loading-text" onclick="tiaozhuan()">0%</div>
 
-<!--
-<div>
-       <button type="button" onclick="window.location.href='/';">一起看电影吧</button>
-</div>
--->
-
-<div class="content">
-    <!--    <h1 data-text="一起看电影吧">
-            <button onclick="window.location.href='/';">一起看电影吧</button>
-        </h1>
-         -->
-    <a href="/index_page">一起看电影吧</a>
-</div>
-
-<script src="../static/js/Blurry_Loading.js"></script>
-<script>
-    var input = document.getElementsByTagName("input");
-    //给input注册按钮事件，用addEventListenner(注意兼容问题）
-    input.addEventListener("keyup", function (event) {
-        //要阻止默认事件
-        event.preventDefault();
-        //我要的是enter件，也就是enter事件，所以要判断是哪个事件
-        if (event.keyCode === 13) {
-            document.getElementsByTagName("button").click();
+    <div class="content" style="position: fixed;padding-left: 24%;padding-top: 18%" onclick="tiaozhuan()">
+        <!--    <h1 data-text="一起看电影吧">
+                <button onclick="window.location.href='/';">一起看电影吧</button>
+            </h1>
+             -->
+        <a href="/index_page">一起看电影吧</a>
+    <!-- 实现跳转的函数-->
+    <script>
+        function tiaozhuan() {
+            window.location.href = "/index_page";
         }
-    })
-</script>
-
+    </script>
+    <script src="../static/js/Blurry_Loading.js"></script>
+    <script>
+        var input = document.getElementsByTagName("input");
+        //给input注册按钮事件，用addEventListenner(注意兼容问题）
+        input.addEventListener("keyup", function (event) {
+            //要阻止默认事件
+            event.preventDefault();
+            //我要的是enter件，也就是enter事件，所以要判断是哪个事件
+            if (event.keyCode === 13) {
+                document.getElementsByTagName("button").click();
+            }
+        })
+    </script>
+</div>
 </body>
 </html>

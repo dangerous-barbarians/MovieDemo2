@@ -41,59 +41,36 @@
     </div>
 </header>
 
-<!-- 第一部分 热映中 -->
-<div class="w3-content w3-padding" style="max-width:1564px">
 
+<div class="w3-content w3-padding" style="max-width:1564px">
+    <!-- 第一部分 热映中 -->
     <div class="w3-container w3-padding-32" id="Hot">
         <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">热映中</h3>
     </div>
     <div class="w3-row-padding w3-padding-16">
-        <div class="w3-third w3-margin-bottom">
-            <img src="../static/img/index_2.jpg" alt="Norway" style="width:100%"
-                 onclick="window.location.href='details_page';">
-            <div class="w3-container w3-white">
-                <h3>肖申克的救赎</h3>
-                <h6 class="w3-opacity">From ¥49</h6>
-                <p>4000人想看 15269人看过</p>
-                <p class="w3-large"></p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom"
-                        onclick="window.location.href='details_page?moviename='+'111';">我想看
-                </button>
+        {% for k in movies %}
+            <div class="w3-third w3-margin-bottom" >
+                <div style="text-align: center">
+                    <img src="{{k['picture']}}" alt="Norway" style="height: 400px;"
+                     onclick="window.location.href='details_page?moviename='+'{{ k['name'] }}';">
+                </div>
+                <div class="w3-container w3-white">
+                    <h3>{{ k['name'] }}</h3>
+                    <h6 class="w3-opacity">评分: {{ k['socre'] }}</h6>
+                    <p>影片时长：{{ k['time'] }}</p>
+                    <p class="w3-large"></p>
+                    <button class="w3-button w3-block w3-black w3-margin-bottom"
+                            onclick="window.location.href='details_page?moviename='+'{{ k['name'] }}';">我想看
+                    </button>
+                </div>
             </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-            <img src="../static/img/index_2.jpg" alt="Norway" style="width:100%"
-                 onclick="window.location.href='details_page';">
-            <div class="w3-container w3-white">
-                <h3>肖申克的救赎</h3>
-                <h6 class="w3-opacity">From ¥49</h6>
-                <p>4000人想看 15269人看过</p>
-                <p class="w3-large"></p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom"
-                        onclick="window.location.href='details_page';">我想看
-                </button>
-            </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-            <img src="../static/img/index_2.jpg" alt="Norway" style="width:100%"
-                 onclick="window.location.href='details_page';">
-            <div class="w3-container w3-white">
-                <h3>肖申克的救赎</h3>
-                <h6 class="w3-opacity">From ¥49</h6>
-                <p>4000人想看 15269人看过</p>
-                <p class="w3-large"></p>
-                <button class="w3-button w3-block w3-black w3-margin-bottom"
-                        onclick="window.location.href='details_page';">我想看
-                </button>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 
     <!-- 第二部分 精品推荐 -->
     <div class="w3-container w3-padding-32" id="projects">
         <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">精品推荐</h3>
     </div>
-
     <div class="w3-row-padding">
         <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-display-container">
@@ -124,7 +101,6 @@
             </div>
         </div>
     </div>
-
     <div class="w3-row-padding">
         <div class="w3-col l3 m6 w3-margin-bottom">
             <div class="w3-display-container">
@@ -160,7 +136,6 @@
     <div class="w3-container w3-padding-32" id="contact">
         <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">即将上映</h3>
     </div>
-
     <div class="w3-row-padding w3-grayscale">
         <div class="w3-col l3 m6 w3-margin-bottom">
             <img src="../static/img/index_2.jpg"
@@ -227,8 +202,6 @@
             <button class="w3-button w3-black" type="submit">Search</button>
         </form>
     </div>
-
-
     <!-- End page content -->
 </div>
 
@@ -239,7 +212,7 @@
         提供当下热门的电影大片在线观看服务，为您提供好看的电影，带你享受无以伦比的影视盛宴。
 
     </p>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+    <p>Powered by <a href="/fly" title="W3.CSS" target="_blank"
                      class="w3-hover-text-green">开心往前飞</a></p>
 </footer>
 

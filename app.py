@@ -1,6 +1,7 @@
 import json
 from flask import Flask, render_template, request
 import houduan
+import houduan_index
 
 app = Flask(__name__, template_folder='templates')
 
@@ -13,12 +14,22 @@ def loading():
 
 @app.route('/index_page')
 def index():  # put application's code here
-	return render_template("index.html")
+	movies = houduan_index.movie_list
+	return render_template("index.html",movies=movies)
 
 
 # 电影详情界面
 @app.route('/details_page', methods=['POST', 'GET'])
 def details_page():
+	movie_list=houduan_index.movie_list
+	movie = movie_list[0]
+	if request.method == 'GET':
+		moviename = request.values.get('moviename')
+		for k in movie_list:
+			if k['name'] == moviename:
+				movie = k
+				print(movie['name'])
+		
 	title = '肖申克的救赎'
 	stitle = '一切的一切都要从越狱说起'
 	mingju = '"向往自由，向往生活"'
@@ -35,7 +46,7 @@ def details_page():
 	dic[6] = img
 	dic[7] = 999
 	dic[8] = daoyan
-	return render_template('details_page.html', data=dic)
+	return render_template('details_page.html', data=dic,movie=movie)
 
 
 # 用户邀约界面
