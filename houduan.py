@@ -16,25 +16,11 @@ data['touxiang'] = touxiang
 data['breif'] = breif
 data['password'] = password
 
-yaoyue = {}
-yqz = '张三'
-syz = 'lisa'
-movie = '肖申克的救赎'
-yytime = '8-20'
-yaoyue['yqz'] = yqz
-yaoyue['syz'] = syz
-yaoyue['movie'] = movie
-yaoyue['yytime'] = yytime
 
-friend1 = ['zhangsan', '123']
-friend2 = ['lisi', '321']
-friend3 = ['wangwu', '666']
-dic = {}
-dic[1] = friend1
-dic[2] = friend2
-dic[3] = friend3
-dic[4] = friend3
-dic[5] = friend3
-dic[6] = friend2
+
+friend1 = {'name':'zhangsan', 'phone':'123'}
+friend2 = {'name':'lisi', 'phone':'321'}
+friend3 = {'name':'wangwu', 'phone':'666'}
+dic = [friend3,friend1,friend2,friend1]
 
 
